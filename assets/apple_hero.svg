@@ -46,10 +46,10 @@
     </text>
   </g>
 
-  <!-- Main Headline: YOONWOO LEE -->
+  <!-- Main Headline: iamywl -->
   <g transform="translate(425, 96)" text-anchor="middle">
-    <text font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="38" font-weight="800" letter-spacing="-0.03em" fill="url(#textGrad)">
-      Yoonwoo Lee
+    <text font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="40" font-weight="800" letter-spacing="-0.03em" fill="url(#textGrad)">
+      iamywl
     </text>
   </g>
 
@@ -78,11 +78,11 @@
       </text>
     </g>
 
-    <!-- Chip 3: High-Perf Systems -->
+    <!-- Chip 3: DevSecOps & Infra -->
     <g transform="translate(240, 0)">
       <rect x="-95" y="-16" width="190" height="32" rx="16" fill="url(#chipBg)" stroke="#334155" stroke-width="1" />
       <text y="5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="600" fill="#E2E8F0" text-anchor="middle">
-        ⚡ Algorithmic Architecture
+        🔒 DevSecOps &amp; Security
       </text>
     </g>
   </g>

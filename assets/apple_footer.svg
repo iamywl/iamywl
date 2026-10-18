@@ -9,7 +9,7 @@
   <line x1="100" y1="10" x2="750" y2="10" stroke="url(#footerBorder)" stroke-width="1" />
   <g transform="translate(425, 45)" text-anchor="middle">
     <text font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="500" fill="#64748B" letter-spacing="0.05em">
-       Designed with Apple Minimalism · Engineered for Mission-Critical Infrastructure · © 2026 Yoonwoo Lee
+       Designed with Apple Minimalism by @iamywl · Engineered for Mission-Critical Infrastructure · © 2026 iamywl
     </text>
   </g>
 </svg>
