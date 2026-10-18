@@ -1,41 +1,46 @@
 <div align="center">
 
-<!--  Apple Obsidian & Titanium Hero Banner -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:000000,30:0b0f19,70:0f172a,100:0284c7&height=220&section=header&text=YOONWOO%20LEE&fontSize=42&fontAlignY=36&fontColor=ffffff&desc=Infrastructure%20%26%20Security%20Engineer%20%7C%20Systems%20%26%20Cloud%20Native&descSize=15&descAlignY=58&descAlign=50" width="100%" alt="Header Banner" />
+<!--  Apple Keynote Hero Banner -->
+<img src="https://raw.githubusercontent.com/iamywl/iamywl/main/assets/apple_hero.svg" width="100%" alt="Yoonwoo Lee - Infrastructure & Security Engineer" />
 
-<!-- Apple SF Mono Style Typing Intro -->
+<br/>
+
+<!-- Apple SF Mono Typing Subtitle -->
 <a href="https://iamywl.github.io">
-  <img src="https://readme-typing-svg.demolab.com?font=SF+Mono&weight=600&size=16&duration=2600&pause=1200&color=38BDF8&center=true&vCenter=true&width=720&lines=Infrastructure+%26+Security+Engineer+%C2%B7+Cloud+Native+Specialist;M.S.+in+Computer+Science+%40+Kyungpook+National+University;eBPF+%C2%B7+Linux+Kernel+Tracing+%C2%B7+Zero-Trust+Cloud+Defense;Distributed+Systems+%C2%B7+High-Performance+Algorithmic+Engines;Automated+IaC+%C2%B7+Observability+%C2%B7+Mission-Critical+CI%2FCD" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=SF+Mono&weight=600&size=15&duration=2600&pause=1200&color=2997FF&center=true&vCenter=true&width=740&lines=Infrastructure+%26+Security+Engineer+%C2%B7+Cloud+Native+Specialist;M.S.+in+Computer+Science+%40+Kyungpook+National+University;eBPF+%C2%B7+Linux+Kernel+Tracing+%C2%B7+Zero-Trust+Cloud+Defense;Distributed+Systems+%C2%B7+High-Performance+Algorithmic+Engines;Automated+IaC+%C2%B7+Observability+%C2%B7+Mission-Critical+CI%2FCD" alt="Typing Subtitle" />
 </a>
 
+<br/>
+
 <p align="center">
-  <a href="https://iamywl.github.io"><img src="https://img.shields.io/badge/%20Portfolio-iamywl.github.io-000000?style=for-the-badge&logo=safari&logoColor=38bdf8" alt="Portfolio" /></a>
+  <a href="https://iamywl.github.io"><img src="https://img.shields.io/badge/%20Portfolio-iamywl.github.io-000000?style=for-the-badge&logo=safari&logoColor=2997FF" alt="Portfolio" /></a>
   &nbsp;
-  <a href="mailto:yoonwoodev@kakao.com"><img src="https://img.shields.io/badge/%20Contact-yoonwoodev%40kakao.com-0b0f19?style=for-the-badge&logo=mail.ru&logoColor=38bdf8" alt="Email" /></a>
+  <a href="mailto:yoonwoodev@kakao.com"><img src="https://img.shields.io/badge/%20Contact-yoonwoodev%40kakao.com-1D1D1F?style=for-the-badge&logo=mail.ru&logoColor=2997FF" alt="Email" /></a>
   &nbsp;
-  <a href="https://github.com/iamywl"><img src="https://img.shields.io/badge/%20GitHub-@iamywl-1e293b?style=for-the-badge&logo=github&logoColor=ffffff" alt="GitHub" /></a>
+  <a href="https://github.com/iamywl"><img src="https://img.shields.io/badge/%20GitHub-@iamywl-000000?style=for-the-badge&logo=github&logoColor=FFFFFF" alt="GitHub" /></a>
 </p>
 
 </div>
 
 ---
 
-###  System Architecture & Engineering Philosophy
+###  System Overview & Architectural Philosophy
 
 > *"Simplicity is the ultimate sophistication."* — Steve Jobs  
 > 저수준 커널 시스템 콜(Syscall)과 eBPF 트레이싱부터, 대규모 분산 클라우드 네이티브 오케스트레이션과 고성능 알고리즘 설계까지 **단단하고 결함 없는 미션 크리티컬 시스템**을 설계하고 구현합니다.
 
-```
-┌─────────────────────────────────────────────────────────────────────────────────┐
-│  [SYSTEM ARCHITECTURE SPECIFICATION]                                            │
-│                                                                                 │
-│  • Identity   : Infrastructure & Security Engineer | Systems & Cloud Native     │
-│  • Education  : M.S. in Computer Science, Kyungpook National University (KNU)   │
-│  • Research   : eBPF · Linux Kernel Tracing · Container Runtime Defense         │
-│  • Honors     : 7x Hackathon & Technical Contest Awards (1st & Excellence)      │
-│  • Workstation: Apple Silicon (macOS) · Linux Kernel 6.x · Distributed Clusters │
-└─────────────────────────────────────────────────────────────────────────────────┘
-```
+<br/>
+
+| Technical Specification | Architectural Details |
+| :--- | :--- |
+| **Discipline** | **Infrastructure & Security Engineering** · Systems & Cloud Native Architecture |
+| **Academic Credentials** | **M.S. in Computer Science**, Kyungpook National University (KNU) |
+| **Kernel & Security** | Linux Kernel 6.x · eBPF Syscall Tracing · Runtime Security · CVE Analysis |
+| **Cloud Native Infra** | Kubernetes Clusters · Docker · Terraform IaC · Prometheus & Grafana |
+| **High-Performance Languages** | C · C++17 · Java 17+ · Go 1.22 · Python 3.12 · POSIX Bash |
+| **Algorithmic Engine** | Samsung Coding Test B-Type (Professional) Track · 500+ Problem Suite |
+| **Honors & Awards** | **7x Hackathons & Technical Competitions** (1st Prize / Excellence) |
+| **Hardware Workstation** | Apple Silicon (macOS) · Bare-metal Linux · Distributed Kubernetes Nodes |
 
 ---
 
@@ -43,13 +48,13 @@
 
 <div align="center">
 
-| Domain | Core Technologies & Frameworks |
+| Domain | Core Stack & Frameworks |
 | :--- | :--- |
-| **🛡️ System & Kernel Security** | ![Linux](https://img.shields.io/badge/Linux_Kernel_6.x-000000?style=flat-square&logo=linux&logoColor=FCC624) ![eBPF](https://img.shields.io/badge/eBPF-0f172a?style=flat-square&logo=linux&logoColor=38bdf8) ![Syscall](https://img.shields.io/badge/Kernel_Tracing-1e293b?style=flat-square&logo=c&logoColor=white) ![Trivy](https://img.shields.io/badge/Trivy_SecOps-0284c7?style=flat-square&logo=securityscorecard&logoColor=white) ![Cilium](https://img.shields.io/badge/Cilium_CNI-000000?style=flat-square&logo=cilium&logoColor=white) |
-| **☁️ Cloud Native & DevOps** | ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=flat-square&logo=kubernetes&logoColor=white) ![Docker](https://img.shields.io/badge/Docker-0f172a?style=flat-square&logo=docker&logoColor=38bdf8) ![Terraform](https://img.shields.io/badge/Terraform_IaC-1e293b?style=flat-square&logo=terraform&logoColor=844FBA) ![Helm](https://img.shields.io/badge/Helm_v3-000000?style=flat-square&logo=helm&logoColor=white) ![Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=flat-square&logo=githubactions&logoColor=white) |
-| **📈 Observability & Telemetry** | ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=flat-square&logo=prometheus&logoColor=white) ![Grafana](https://img.shields.io/badge/Grafana-0f172a?style=flat-square&logo=grafana&logoColor=F46800) ![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white) |
-| **💻 Systems & Backend Languages** | ![C](https://img.shields.io/badge/C-00599C?style=flat-square&logo=c&logoColor=white) ![C++](https://img.shields.io/badge/C++17-00599C?style=flat-square&logo=cplusplus&logoColor=white) ![Java](https://img.shields.io/badge/Java_17+-007396?style=flat-square&logo=openjdk&logoColor=white) ![Go](https://img.shields.io/badge/Go_1.22-00ADD8?style=flat-square&logo=go&logoColor=white) ![Python](https://img.shields.io/badge/Python_3.12-3776AB?style=flat-square&logo=python&logoColor=white) ![Bash](https://img.shields.io/badge/Bash_5.x-1e293b?style=flat-square&logo=gnubash&logoColor=4EAA25) |
-| **🧠 Algorithms & Problem Solving** | ![Samsung B-Type](https://img.shields.io/badge/Samsung_B--Type_Pro-000000?style=flat-square&logo=samsung&logoColor=1428A0) ![Graph & DP](https://img.shields.io/badge/Graph_&_DP_Specialist-0f172a?style=flat-square&logo=databricks&logoColor=38bdf8) ![500+](https://img.shields.io/badge/500+_Master_Suite-1e293b?style=flat-square&logo=gitbook&logoColor=white) |
+| **🛡️ System & Kernel Security** | ![Linux](https://img.shields.io/badge/Linux_Kernel_6.x-000000?style=flat-square&logo=linux&logoColor=FCC624) ![eBPF](https://img.shields.io/badge/eBPF-1D1D1F?style=flat-square&logo=linux&logoColor=2997FF) ![Syscall](https://img.shields.io/badge/Kernel_Tracing-000000?style=flat-square&logo=c&logoColor=white) ![Trivy](https://img.shields.io/badge/Trivy_SecOps-1D1D1F?style=flat-square&logo=securityscorecard&logoColor=white) ![Cilium](https://img.shields.io/badge/Cilium_CNI-000000?style=flat-square&logo=cilium&logoColor=white) |
+| **☁️ Cloud Native & DevOps** | ![Kubernetes](https://img.shields.io/badge/Kubernetes-000000?style=flat-square&logo=kubernetes&logoColor=326CE5) ![Docker](https://img.shields.io/badge/Docker-1D1D1F?style=flat-square&logo=docker&logoColor=2997FF) ![Terraform](https://img.shields.io/badge/Terraform_IaC-000000?style=flat-square&logo=terraform&logoColor=844FBA) ![Helm](https://img.shields.io/badge/Helm_v3-1D1D1F?style=flat-square&logo=helm&logoColor=white) ![Actions](https://img.shields.io/badge/GitHub_Actions-000000?style=flat-square&logo=githubactions&logoColor=2088FF) |
+| **📈 Observability & Metrics** | ![Prometheus](https://img.shields.io/badge/Prometheus-1D1D1F?style=flat-square&logo=prometheus&logoColor=E6522C) ![Grafana](https://img.shields.io/badge/Grafana-000000?style=flat-square&logo=grafana&logoColor=F46800) ![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-1D1D1F?style=flat-square&logo=opentelemetry&logoColor=white) |
+| **💻 Systems & Backend** | ![C](https://img.shields.io/badge/C-000000?style=flat-square&logo=c&logoColor=00599C) ![C++](https://img.shields.io/badge/C++17-1D1D1F?style=flat-square&logo=cplusplus&logoColor=00599C) ![Java](https://img.shields.io/badge/Java_17+-000000?style=flat-square&logo=openjdk&logoColor=white) ![Go](https://img.shields.io/badge/Go_1.22-1D1D1F?style=flat-square&logo=go&logoColor=00ADD8) ![Python](https://img.shields.io/badge/Python_3.12-000000?style=flat-square&logo=python&logoColor=white) ![Bash](https://img.shields.io/badge/Bash_5.x-1D1D1F?style=flat-square&logo=gnubash&logoColor=4EAA25) |
+| **🧠 Algorithms & Computation** | ![Samsung B-Type](https://img.shields.io/badge/Samsung_B--Type_Pro-000000?style=flat-square&logo=samsung&logoColor=white) ![Graph & DP](https://img.shields.io/badge/Graph_&_DP_Specialist-1D1D1F?style=flat-square&logo=databricks&logoColor=2997FF) ![500+](https://img.shields.io/badge/500+_Master_Suite-000000?style=flat-square&logo=gitbook&logoColor=white) |
 
 </div>
 
@@ -77,25 +82,23 @@
 <table border="0">
   <tr>
     <td align="center" width="50%">
-      <img src="https://github-readme-stats.vercel.app/api?username=iamywl&show_icons=true&theme=tokyonight&bg_color=0b0f19&title_color=38bdf8&text_color=94a3b8&icon_color=38bdf8&border_color=1e293b&hide_border=false" width="100%" alt="GitHub Overall Stats" />
+      <img src="https://github-readme-stats.vercel.app/api?username=iamywl&show_icons=true&theme=dark&bg_color=000000&title_color=2997ff&text_color=a1a1a6&icon_color=2997ff&border_color=1d1d1f&hide_border=false" width="100%" alt="GitHub Overall Stats" />
     </td>
     <td align="center" width="50%">
-      <img src="https://streak-stats.demolab.com/?user=iamywl&theme=tokyonight&background=0b0f19&border=1e293b&stroke=38bdf8&ring=38bdf8&fire=38bdf8&currStreakNum=38bdf8&sideNums=94a3b8&sideLabels=94a3b8&dates=64748b" width="100%" alt="Streak Stats" />
+      <img src="https://streak-stats.demolab.com/?user=iamywl&theme=dark&background=000000&border=1d1d1f&stroke=2997ff&ring=2997ff&fire=2997ff&currStreakNum=2997ff&sideNums=a1a1a6&sideLabels=a1a1a6&dates=64748b" width="100%" alt="Streak Stats" />
     </td>
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=iamywl&layout=compact&theme=tokyonight&bg_color=0b0f19&title_color=38bdf8&text_color=94a3b8&border_color=1e293b&hide_border=false" width="70%" alt="Top Languages" />
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=iamywl&layout=compact&theme=dark&bg_color=000000&title_color=2997ff&text_color=a1a1a6&border_color=1d1d1f&hide_border=false" width="70%" alt="Top Languages" />
     </td>
   </tr>
 </table>
 
+<br/>
+
 <!-- Contribution Snake Animation -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/iamywl/iamywl/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/iamywl/iamywl/output/github-contribution-grid-snake.svg">
-  <img alt="GitHub Contribution Grid Snake" src="https://raw.githubusercontent.com/iamywl/iamywl/output/github-contribution-grid-snake-dark.svg" width="100%">
-</picture>
+<img src="https://raw.githubusercontent.com/iamywl/iamywl/output/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub Contribution Grid Snake" />
 
 </div>
 
@@ -105,14 +108,11 @@
 
 ### 🤝 Networking & Collaboration
 *"Great engineering happens at the intersection of curiosity and rigorous collaboration."*  
-언제든 커피챗, 기술 논의, 깃허브 Follow & Star는 항상 열려 있습니다.
+언제든 커피챗, 기술 교류, 깃허브 Follow & Star를 환영합니다.
 
 <br/>
 
-<!-- Apple Aesthetic Wave Footer -->
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0284c7,50:0f172a,100:000000&height=110&section=footer" width="100%" alt="Footer Wave" />
-
-<br/>
-<sub>Designed with Apple Precision · Built for Resilient Infrastructure · © 2026 Yoonwoo Lee</sub>
+<!-- Apple Aesthetic Footer -->
+<img src="https://raw.githubusercontent.com/iamywl/iamywl/main/assets/apple_footer.svg" width="100%" alt="Apple Footer" />
 
 </div>
