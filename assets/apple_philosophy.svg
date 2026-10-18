@@ -1,0 +1,38 @@
+<svg width="850" height="130" viewBox="0 0 850 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="philBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080C14" />
+      <stop offset="50%" stop-color="#030508" />
+      <stop offset="100%" stop-color="#060910" />
+    </linearGradient>
+
+    <!-- Border Gradient -->
+    <linearGradient id="philBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.12" />
+      <stop offset="50%" stop-color="#3182F6" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.06" />
+    </linearGradient>
+
+    <!-- Accent Glow -->
+    <radialGradient id="philGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#3182F6" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect x="1" y="1" width="848" height="128" rx="20" fill="url(#philBg)" stroke="url(#philBorder)" stroke-width="1.2" />
+  <rect x="1" y="1" width="848" height="128" rx="20" fill="url(#philGlow)" />
+
+  <g transform="translate(425, 42)" text-anchor="middle">
+    <text font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="16" font-style="italic" font-weight="600" letter-spacing="-0.01em" fill="#F8FAFC">
+      "Simplicity is the ultimate sophistication."
+    </text>
+    <text y="24" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="500" fill="#64748B" letter-spacing="0.05em">
+      — STEVE JOBS
+    </text>
+    <text y="52" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', 'SF Pro Text', sans-serif" font-size="13.5" font-weight="500" letter-spacing="-0.01em" fill="#94A3B8">
+      복잡성을 극복하고 가장 본질적인 신뢰성과 단단한 시스템을 만듭니다.
+    </text>
+  </g>
+</svg>

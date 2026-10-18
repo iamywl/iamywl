@@ -1,15 +1,19 @@
-<svg width="850" height="80" viewBox="0 0 850 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="850" height="90" viewBox="0 0 850 90" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="footerBorder" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#1E293B" stop-opacity="0" />
-      <stop offset="50%" stop-color="#334155" stop-opacity="0.8" />
+      <stop offset="30%" stop-color="#3182F6" stop-opacity="0.4" />
+      <stop offset="70%" stop-color="#3182F6" stop-opacity="0.4" />
       <stop offset="100%" stop-color="#1E293B" stop-opacity="0" />
     </linearGradient>
   </defs>
-  <line x1="100" y1="10" x2="750" y2="10" stroke="url(#footerBorder)" stroke-width="1" />
-  <g transform="translate(425, 45)" text-anchor="middle">
-    <text font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="12" font-weight="500" fill="#64748B" letter-spacing="0.05em">
-       Designed with Apple Minimalism by @iamywl · Engineered for Mission-Critical Infrastructure · © 2026 iamywl
+  <line x1="120" y1="15" x2="730" y2="15" stroke="url(#footerBorder)" stroke-width="1.2" />
+  <g transform="translate(425, 48)" text-anchor="middle">
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', 'SF Pro Text', sans-serif" font-size="12" font-weight="500" fill="#8B95A1" letter-spacing="0.04em">
+       Designed with Apple Precision &amp; Toss Simplicity · @iamywl
+    </text>
+    <text y="20" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="400" fill="#475569" letter-spacing="0.02em">
+      Mission-Critical Cloud Native &amp; Systems Architecture · © 2026 iamywl
     </text>
   </g>
 </svg>

@@ -1,0 +1,90 @@
+<svg width="415" height="230" viewBox="0 0 415 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B0F17" />
+      <stop offset="60%" stop-color="#070A0F" />
+      <stop offset="100%" stop-color="#04060A" />
+    </linearGradient>
+
+    <!-- Ambient Glow: Titanium Cyan -->
+    <radialGradient id="cardGlow" cx="90%" cy="10%" r="60%">
+      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.18" />
+      <stop offset="60%" stop-color="#38BDF8" stop-opacity="0.03" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Delicate Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.22" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.04" />
+    </linearGradient>
+
+    <!-- Pill Gradient -->
+    <linearGradient id="pillBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.6" />
+    </linearGradient>
+  </defs>
+
+  <!-- Card Base with Soft 20px TDS Radius -->
+  <rect x="1" y="1" width="413" height="228" rx="20" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.2" />
+  <rect x="1" y="1" width="413" height="228" rx="20" fill="url(#cardGlow)" />
+
+  <!-- Top Domain Pill & Action Icon -->
+  <g transform="translate(24, 24)">
+    <rect width="186" height="22" rx="11" fill="#38BDF8" fill-opacity="0.12" stroke="#38BDF8" stroke-opacity="0.3" stroke-width="0.8" />
+    <text x="93" y="15" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.1em" fill="#38BDF8" text-anchor="middle">
+       APPLE SILICON IAC
+    </text>
+  </g>
+
+  <!-- Repository Action Arrow -->
+  <g transform="translate(372, 28)">
+    <circle cx="10" cy="10" r="14" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="0.8" />
+    <path d="M7 13L13 7M13 7H8.5M13 7V11.5" stroke="#8B95A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Title: Project Name -->
+  <text x="24" y="82" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="20" font-weight="800" letter-spacing="-0.02em" fill="#FFFFFF">
+    IaC_apple_sillicon
+  </text>
+
+  <!-- English Description -->
+  <text x="24" y="108" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="12.5" font-weight="600" letter-spacing="-0.01em" fill="#7DD3FC">
+    Apple Silicon Native Multi-Cluster K8s IaC
+  </text>
+
+  <!-- Korean Highlights -->
+  <text x="24" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="12" font-weight="400" letter-spacing="-0.01em" fill="#8B95A1">
+    ARM64 단일 머신에서 프로덕션급 멀티 클러스터 K8s 자동화 구축
+  </text>
+  <text x="24" y="150" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="12" font-weight="400" letter-spacing="-0.01em" fill="#8B95A1">
+    Trivy 실측 취약점(CVE) 자동 스캐닝 및 제로트러스트 보안 검증
+  </text>
+
+  <!-- Bottom Tech Stack Chips -->
+  <g transform="translate(24, 184)">
+    <!-- Pill 1: Terraform -->
+    <g transform="translate(0, 0)">
+      <rect width="78" height="24" rx="8" fill="url(#pillBg)" stroke="#334155" stroke-width="0.8" />
+      <text x="39" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#CBD5E1" text-anchor="middle">Terraform</text>
+    </g>
+    <!-- Pill 2: Apple ARM64 -->
+    <g transform="translate(84, 0)">
+      <rect width="90" height="24" rx="8" fill="url(#pillBg)" stroke="#334155" stroke-width="0.8" />
+      <text x="45" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#CBD5E1" text-anchor="middle">Apple ARM64</text>
+    </g>
+    <!-- Pill 3: Kubernetes -->
+    <g transform="translate(180, 0)">
+      <rect width="84" height="24" rx="8" fill="url(#pillBg)" stroke="#334155" stroke-width="0.8" />
+      <text x="42" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#CBD5E1" text-anchor="middle">Kubernetes</text>
+    </g>
+    <!-- Pill 4: Trivy -->
+    <g transform="translate(270, 0)">
+      <rect width="56" height="24" rx="8" fill="url(#pillBg)" stroke="#334155" stroke-width="0.8" />
+      <text x="28" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#CBD5E1" text-anchor="middle">Trivy</text>
+    </g>
+  </g>
+</svg>
