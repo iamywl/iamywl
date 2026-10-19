@@ -35,6 +35,18 @@
 
 <br/>
 
+### 🏆 Honors &amp; Engineering Awards
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/card_award_google_ai_agent_dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/card_award_google_ai_agent_light.svg">
+    <img src="./assets/card_award_google_ai_agent_light.svg" width="100%" alt="Google AI Agent Challenge 2026 - 우수상 (Excellence Award)" />
+  </picture>
+</p>
+
+<br/>
+
 ### 🚀 Flagship Production &amp; Research Showcases
 
 <!-- Row 1: ebpf_NSR & service_infra -->
@@ -226,6 +238,33 @@
 | **Latency SLA** | `p95 < 100ms` | **`p95 Response Time < 38ms`** | 🟢 SLA Met |
 | **Cache Hit Ratio** | `> 85%` | **`94%+ Redis Distributed Cache Hit`** | 🟢 Zero Read Spikes |
 | **Orchestration** | Microservices | **Kubernetes Multi-Service HPA** | 🟢 Auto-Scaled |
+
+</details>
+
+<details>
+<summary><b>🏆 Honors &amp; Awards: 2026 Google AI Agent Challenge · 우수상 (Excellence Award)</b></summary>
+
+> **Award Title:** 2026학년도 Google AI Agent Challenge — **우수상 (2nd Place · Excellence Award)**  
+> **Conferment Date:** 2026.06.05 · **Organizer:** 소프트웨어교육원 주관 · **Team:** 구글링 (Team Googling)
+
+- **Challenge Overview:** Autonomous AI Agent architecture design, multi-agent cooperative workflows, and production-grade task automation under strict time constraints.
+- **Architectural Contribution:**
+  - Designed an autonomous multi-agent loop pipeline combining planner, executor, and self-reflection error-recovery subagents.
+  - Implemented high-reliability tool-calling schemas and stateful context management to eliminate hallucinated execution steps.
+  - Benchmarked sub-second decision latency and deterministic task completion across complex engineering scenarios.
+
+| Telemetry Dimension | Benchmark / SLA Target | Verified Production Metric | Status |
+| :--- | :--- | :--- | :--- |
+| **Award Standing** | Top Tier Selection | **2nd Place (우수상 입상)** | 🟢 Official Award |
+| **Agent Architecture** | Multi-Agent Loop | **Self-Healing Autonomous Pipeline** | 🟢 Production Grade |
+| **Tool Calling Reliability** | Zero-Hallucination | **100% Deterministic Schema Gating** | 🟢 Verified |
+
+<br/>
+
+<div align="center">
+  <img src="./assets/certificate_google_ai_agent.jpg" width="60%" alt="2026 Google AI Agent Challenge 우수상 상장" style="border-radius: 12px; border: 1px solid #E2E8F0;" />
+  <p><i>Official Certificate of Award (우수상 · 제SEI-2026-086호 · Verified for @iamywl)</i></p>
+</div>
 
 </details>
 
