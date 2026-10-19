@@ -1,151 +1,126 @@
 <svg width="415" height="240" viewBox="0 0 415 240" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#19130D" />
-      <stop offset="55%" stop-color="#100A05" />
-      <stop offset="100%" stop-color="#070402" />
+    <!-- Ceramic White Card Background -->
+    <linearGradient id="brightCardBg5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
     </linearGradient>
 
-    <!-- visionOS Specular Rim Gradient (135°) -->
-    <linearGradient id="borderGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35" />
-      <stop offset="30%" stop-color="#F59E0B" stop-opacity="0.30" />
-      <stop offset="70%" stop-color="#3182F6" stop-opacity="0.18" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05" />
+    <!-- Apple Specular Bevel Rim (135°) -->
+    <linearGradient id="brightBorder5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="35%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#CBD5E1" />
     </linearGradient>
 
-    <!-- Ambient Glow: Amber / Flame Accent -->
-    <radialGradient id="cardGlow5" cx="88%" cy="12%" r="65%">
-      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.22" />
-      <stop offset="60%" stop-color="#3182F6" stop-opacity="0.04" />
-      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    <!-- Subtle Ambient Underglow: Toss Blue Refraction -->
+    <radialGradient id="tossGlow5" cx="90%" cy="10%" r="60%">
+      <stop offset="0%" stop-color="#3182F6" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#3182F6" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Telemetry Box Background -->
-    <linearGradient id="telemBg5" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#3182F6" stop-opacity="0.04" />
-    </linearGradient>
-
-    <linearGradient id="telemBorder5" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FBBF24" stop-opacity="0.45" />
-      <stop offset="100%" stop-color="#F59E0B" stop-opacity="0.20" />
-    </linearGradient>
-
-    <!-- Stack Pill Background -->
-    <linearGradient id="pillBg5" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.65" />
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.75" />
-    </linearGradient>
-
-    <!-- Sheen Gradient -->
-    <linearGradient id="sheen5" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Sheen Gradient for Bright Glass -->
+    <linearGradient id="brightSheen5" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.65" />
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
     </linearGradient>
 
     <clipPath id="cardClip5">
-      <rect x="1" y="1" width="413" height="238" rx="20" />
+      <rect x="1" y="1" width="413" height="238" rx="18" />
     </clipPath>
 
     <style>
       @keyframes cardSheen5 {
         0% { transform: translateX(-150%) skewX(-20deg); opacity: 0; }
-        25% { opacity: 0.6; }
-        60% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+        20% { opacity: 0.8; }
+        55% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
         100% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
       }
-      @keyframes telemPulse5 {
-        0%, 100% { filter: drop-shadow(0 0 2px rgba(251, 191, 36, 0.25)); }
-        50% { filter: drop-shadow(0 0 7px rgba(245, 158, 11, 0.55)); }
-      }
-      .card-sheen-sweep5 {
+      .sheen-sweep5 {
         animation: cardSheen5 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-      }
-      .telem-box5 {
-        animation: telemPulse5 3.5s ease-in-out infinite;
+        animation-delay: 5.2s;
       }
     </style>
   </defs>
 
-  <!-- Unibody Card Canvas -->
-  <rect x="1" y="1" width="413" height="238" rx="20" fill="url(#bgGrad5)" stroke="url(#borderGrad5)" stroke-width="1.2" />
-  <rect x="1" y="1" width="413" height="238" rx="20" fill="url(#cardGlow5)" />
+  <!-- Card Surface with Specular Rim & Ambient Glow -->
+  <rect x="1" y="1" width="413" height="238" rx="18" fill="url(#brightCardBg5)" stroke="url(#brightBorder5)" stroke-width="1.2" />
+  <rect x="1" y="1" width="413" height="238" rx="18" fill="url(#tossGlow5)" />
 
-  <!-- Sheen Sweep -->
+  <!-- Shimmering Specular Sheen -->
   <g clip-path="url(#cardClip5)">
-    <rect class="card-sheen-sweep5" x="0" y="0" width="120" height="240" fill="url(#sheen5)" />
+    <rect class="sheen-sweep5" x="0" y="0" width="120" height="240" fill="url(#brightSheen5)" />
   </g>
 
-  <!-- Top Domain Pill -->
-  <g transform="translate(20, 20)">
-    <rect width="188" height="22" rx="11" fill="#F59E0B" fill-opacity="0.15" stroke="#F59E0B" stroke-opacity="0.4" stroke-width="0.8" />
-    <text x="94" y="15" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.08em" fill="#FBBF24" text-anchor="middle">
+  <!-- Top Domain Capsule: HIGH-CONCURRENCY WAS -->
+  <g transform="translate(20, 18)">
+    <rect width="180" height="24" rx="12" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+    <text x="90" y="16.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.08em" fill="#1D4ED8" text-anchor="middle">
       ⚡ HIGH-CONCURRENCY WAS
     </text>
   </g>
 
-  <!-- Repository Action Arrow Link -->
-  <g transform="translate(367, 18)">
-    <circle cx="14" cy="14" r="14" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="0.8" />
-    <path d="M10 18L18 10M18 10H12M18 10V16" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Action Arrow Link Button -->
+  <g transform="translate(367, 16)">
+    <circle cx="14" cy="14" r="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+    <path d="M10 18L18 10M18 10H12M18 10V16" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
   </g>
 
-  <!-- Title: Middleware_Hello -->
-  <text x="20" y="74" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="20" font-weight="800" letter-spacing="-0.02em" fill="#FFFFFF">
+  <!-- Repository Title -->
+  <text x="20" y="74" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="20" font-weight="800" letter-spacing="-0.025em" fill="#0F172A">
     Middleware_Hello
   </text>
 
-  <!-- Subtitle -->
-  <text x="20" y="96" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="12" font-weight="600" letter-spacing="-0.01em" fill="#FBBF24">
+  <!-- Headline Subtitle -->
+  <text x="20" y="96" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="12" font-weight="600" letter-spacing="-0.01em" fill="#2563EB">
     High-Concurrency Linux WAS &amp; Systems Architecture
   </text>
 
-  <!-- Architecture Highlights -->
-  <text x="20" y="118" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#94A3B8">
+  <!-- Architectural Narrative -->
+  <text x="20" y="118" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#475569">
     • Asynchronous epoll reactor with edge-triggered multiplexing
   </text>
-  <text x="20" y="134" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#94A3B8">
+  <text x="20" y="134" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#475569">
     • Non-blocking ring buffer &amp; zero-copy worker thread pool
   </text>
 
-  <!-- Dedicated Telemetry Glass Box -->
-  <g class="telem-box5" transform="translate(20, 148)">
-    <rect width="375" height="32" rx="8" fill="url(#telemBg5)" stroke="url(#telemBorder5)" stroke-width="1" />
+  <!-- Recruiter Telemetry Glass Box -->
+  <g transform="translate(20, 148)">
+    <rect width="375" height="34" rx="9" fill="#F0F7FF" stroke="#BFDBFE" stroke-width="1" />
     <!-- Metric 1 -->
-    <text x="14" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#E2E8F0">
-      🚀 CONCURRENCY: <tspan fill="#FBBF24" font-weight="800">10,000+ Conn</tspan>
+    <text x="14" y="21.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#334155">
+      ⚡ CONCURRENCY: <tspan fill="#2563EB" font-weight="800">10,000+ Conn</tspan>
     </text>
-    <line x1="184" y1="8" x2="184" y2="24" stroke="#334155" stroke-width="1" />
+    <!-- Divider -->
+    <line x1="184" y1="9" x2="184" y2="25" stroke="#CBD5E1" stroke-width="1" />
     <!-- Metric 2 -->
-    <text x="196" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#E2E8F0">
-      ⚡ LATENCY PROFILE: <tspan fill="#34D399" font-weight="800">p99 &lt; 5ms</tspan>
+    <text x="196" y="21.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#334155">
+      ⏱️ LATENCY: <tspan fill="#059669" font-weight="800">p99 &lt; 5ms</tspan>
     </text>
   </g>
 
-  <!-- Bottom Tech Stack Chips -->
+  <!-- Bottom Tech Stack Pills -->
   <g transform="translate(20, 196)">
-    <!-- Pill 1: Linux Kernel -->
+    <!-- Pill 1 -->
     <g transform="translate(0, 0)">
-      <rect width="84" height="24" rx="7" fill="url(#pillBg5)" stroke="#334155" stroke-width="0.8" />
-      <text x="42" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">Linux Kernel</text>
+      <rect width="90" height="24" rx="7" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="45" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="middle">Linux Kernel</text>
     </g>
-    <!-- Pill 2: epoll Reactor -->
-    <g transform="translate(92, 0)">
-      <rect width="90" height="24" rx="7" fill="url(#pillBg5)" stroke="#334155" stroke-width="0.8" />
-      <text x="45" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">epoll Reactor</text>
+    <!-- Pill 2 -->
+    <g transform="translate(98, 0)">
+      <rect width="94" height="24" rx="7" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="47" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="middle">epoll Reactor</text>
     </g>
-    <!-- Pill 3: C / Java -->
-    <g transform="translate(190, 0)">
-      <rect width="66" height="24" rx="7" fill="url(#pillBg5)" stroke="#334155" stroke-width="0.8" />
-      <text x="33" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">C / Java</text>
+    <!-- Pill 3 -->
+    <g transform="translate(200, 0)">
+      <rect width="66" height="24" rx="7" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="33" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="middle">C / Java</text>
     </g>
-    <!-- Pill 4: Systems Opt -->
-    <g transform="translate(264, 0)">
-      <rect width="88" height="24" rx="7" fill="url(#pillBg5)" stroke="#334155" stroke-width="0.8" />
-      <text x="44" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">Systems Opt</text>
+    <!-- Pill 4 -->
+    <g transform="translate(274, 0)">
+      <rect width="88" height="24" rx="7" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="44" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="middle">Systems Opt</text>
     </g>
   </g>
 </svg>

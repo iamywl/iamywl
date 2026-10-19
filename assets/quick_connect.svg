@@ -1,69 +1,46 @@
 <svg width="850" height="54" viewBox="0 0 850 54" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Background Glass Gradient -->
-    <linearGradient id="barBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0F172A" stop-opacity="0.75" />
-      <stop offset="100%" stop-color="#080C14" stop-opacity="0.85" />
+    <linearGradient id="brightBarBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
     </linearGradient>
 
     <!-- Specular Rim Gradient (135°) -->
-    <linearGradient id="barBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.32" />
-      <stop offset="30%" stop-color="#3182F6" stop-opacity="0.35" />
-      <stop offset="70%" stop-color="#06B6D4" stop-opacity="0.20" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.08" />
+    <linearGradient id="brightBarBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#CBD5E1" />
     </linearGradient>
 
     <!-- Button Glass Gradient -->
-    <linearGradient id="btnBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.09" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.02" />
-    </linearGradient>
-
-    <linearGradient id="btnBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.22" />
-      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.25" />
+    <linearGradient id="brightBtnBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F1F5F9" />
     </linearGradient>
 
     <!-- Sheen Gradient -->
-    <linearGradient id="quickSheen" x1="0%" y1="0%" x2="100%" y2="0%">
+    <linearGradient id="brightQuickSheen" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.25" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.7" />
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
     </linearGradient>
 
-    <clipPath id="barClip">
+    <clipPath id="quickBarClip">
       <rect x="1" y="1" width="848" height="52" rx="18" />
     </clipPath>
 
     <style>
       @keyframes barSheenSweep {
-        0% {
-          transform: translateX(-150%) skewX(-20deg);
-          opacity: 0;
-        }
-        20% {
-          opacity: 0.6;
-        }
-        50% {
-          transform: translateX(250%) skewX(-20deg);
-          opacity: 0;
-        }
-        100% {
-          transform: translateX(250%) skewX(-20deg);
-          opacity: 0;
-        }
+        0% { transform: translateX(-150%) skewX(-20deg); opacity: 0; }
+        20% { opacity: 0.7; }
+        50% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+        100% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
       }
 
       @keyframes liveDotGlow {
-        0%, 100% {
-          opacity: 1;
-          filter: drop-shadow(0 0 2px #34D399);
-        }
-        50% {
-          opacity: 0.4;
-          filter: drop-shadow(0 0 6px #10B981);
-        }
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.6; transform: scale(1.2); }
       }
 
       .sheen-fast {
@@ -72,53 +49,54 @@
 
       .live-dot {
         animation: liveDotGlow 2s ease-in-out infinite;
+        transform-origin: 242px 19px;
       }
     </style>
   </defs>
 
   <!-- Container Unibody -->
-  <rect x="1" y="1" width="848" height="52" rx="18" fill="url(#barBg)" stroke="url(#barBorder)" stroke-width="1.2" />
+  <rect x="1" y="1" width="848" height="52" rx="18" fill="url(#brightBarBg)" stroke="url(#brightBarBorder)" stroke-width="1.2" />
 
   <!-- Sheen Sweep -->
-  <g clip-path="url(#barClip)">
-    <rect class="sheen-fast" x="0" y="0" width="160" height="54" fill="url(#quickSheen)" />
+  <g clip-path="url(#quickBarClip)">
+    <rect class="sheen-fast" x="0" y="0" width="160" height="54" fill="url(#brightQuickSheen)" />
   </g>
 
   <!-- Button 1: Portfolio -->
   <g transform="translate(14, 8)">
-    <rect width="262" height="38" rx="12" fill="url(#btnBg)" stroke="url(#btnBorder)" stroke-width="0.8" />
+    <rect width="262" height="38" rx="12" fill="url(#brightBtnBg)" stroke="#E2E8F0" stroke-width="1" />
     <!-- Globe / Safari Vector Icon -->
-    <g transform="translate(16, 11)" stroke="#38BDF8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(16, 11)" stroke="#2563EB" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <circle cx="8" cy="8" r="7" />
       <path d="M1 8h14M8 1a10.5 10.5 0 0 1 0 14 10.5 10.5 0 0 1 0-14" />
     </g>
-    <text x="42" y="24" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">
-      PORTFOLIO <tspan fill="#38BDF8" font-weight="500">· iamywl.github.io</tspan>
+    <text x="42" y="24" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="12" font-weight="700" fill="#0F172A">
+      PORTFOLIO <tspan fill="#2563EB" font-weight="600">· iamywl.github.io</tspan>
     </text>
   </g>
 
   <!-- Button 2: GitHub Profile -->
   <g transform="translate(290, 8)">
-    <rect width="270" height="38" rx="12" fill="url(#btnBg)" stroke="url(#btnBorder)" stroke-width="0.8" />
+    <rect width="270" height="38" rx="12" fill="url(#brightBtnBg)" stroke="#E2E8F0" stroke-width="1" />
     <!-- GitHub Mark Vector Icon -->
-    <path transform="translate(16, 11)" fill="#FFFFFF" fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8a8.01 8.01 0 0 0 5.47 7.59c.4.07.55-.17.55-.38v-1.49c-2.23.48-2.69-1.07-2.69-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.23 1.88.87 2.33.67.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.66 7.66 0 0 1 8 4.07c.68.01 1.36.09 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
-    <text x="42" y="24" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">
-      GITHUB <tspan fill="#94A3B8" font-weight="500">· @iamywl</tspan>
+    <path transform="translate(16, 11)" fill="#0F172A" fill-rule="evenodd" clip-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8a8.01 8.01 0 0 0 5.47 7.59c.4.07.55-.17.55-.38v-1.49c-2.23.48-2.69-1.07-2.69-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.23.83 1.23.83.72 1.23 1.88.87 2.33.67.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82A7.66 7.66 0 0 1 8 4.07c.68.01 1.36.09 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+    <text x="42" y="24" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="12" font-weight="700" fill="#0F172A">
+      GITHUB <tspan fill="#64748B" font-weight="500">· @iamywl</tspan>
     </text>
   </g>
 
   <!-- Button 3: Architecture & Security -->
   <g transform="translate(574, 8)">
-    <rect width="262" height="38" rx="12" fill="url(#btnBg)" stroke="url(#btnBorder)" stroke-width="0.8" />
+    <rect width="262" height="38" rx="12" fill="url(#brightBtnBg)" stroke="#E2E8F0" stroke-width="1" />
     <!-- Shield / Verification Icon -->
-    <g transform="translate(16, 11)" stroke="#34D399" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g transform="translate(16, 11)" stroke="#059669" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path d="M8 1.5l6 2.5v4.5c0 4.5-3 7.5-6 8.5-3-1-6-4-6-8.5V4l6-2.5z" />
       <path d="M5.5 8l2 2 4-4" />
     </g>
     <!-- Live Status Dot -->
     <circle class="live-dot" cx="242" cy="19" r="3.5" fill="#10B981" />
-    <text x="42" y="24" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="12" font-weight="700" fill="#F8FAFC">
-      DEVSECOPS <tspan fill="#34D399" font-weight="500">· Systems Active</tspan>
+    <text x="42" y="24" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="12" font-weight="700" fill="#0F172A">
+      DEVSECOPS <tspan fill="#059669" font-weight="600">· Systems Active</tspan>
     </text>
   </g>
 </svg>

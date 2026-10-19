@@ -1,37 +1,37 @@
 <div align="center">
 
-<!-- 1. visionOS & Toss Liquid Glass Hero Banner -->
-<img src="./assets/hero_banner.svg" width="100%" alt="@iamywl - Infrastructure & Security Architect" />
+<!-- Clean Toss White & Apple Minimalist Hero Banner -->
+<img src="./assets/hero_banner.svg" width="100%" alt="@iamywl - Infrastructure &amp; Security Architect" />
 
 <br/><br/>
 
-<!-- 2. Bespoke Liquid Glass Quick Connect Bar (NO shields.io) -->
+<!-- Clean White Liquid Glass Quick Connect Dock -->
 <a href="https://iamywl.github.io">
-  <img src="./assets/quick_connect.svg" width="100%" alt="Quick Connect & Portfolio" />
+  <img src="./assets/quick_connect.svg" width="100%" alt="Quick Connect &amp; Portfolio" />
 </a>
 
 </div>
 
 <br/>
 
-###  Headhunter Fast-Scan Matrix (Target Roles & Core Stacks)
+### 🌤️ Engineering Focus &amp; Core Stacks
 
-| Attribute | Verified Production Engineering Profile |
+| Classification | Technical Specialization &amp; Architecture Matrix |
 | :--- | :--- |
-| **Primary Domain** | **Infrastructure & Security Architect \| Cloud Native & Systems** |
+| **Primary Domain** | **Infrastructure &amp; Security Architect \| Cloud Native &amp; Systems** |
 | **Target Roles** | **Senior SRE / Platform Engineer / DevSecOps Architect / Linux Systems Engineer** |
-| **Kernel & Systems** | `Linux Kernel 6.x` · `eBPF (BCC/libbpf)` · `C` · `Go` · `epoll WAS` · `Tart VM` |
-| **Cloud Native & K8s** | `Kubernetes (Multi-Cluster)` · `Docker` · `ArgoCD GitOps` · `Istio Mesh` · `MetalLB` |
-| **SecOps & IaC** | `Terraform (Apple Silicon)` · `Ansible` · `Kyverno` · `Falco` · `Trivy` · `Vault` |
-| **Production Metrics** | **&lt; 1.2μs** hook latency · **100k+ SYN/s** mitigated · **99.9%** K8s uptime · **10k+** conn |
+| **Kernel &amp; Systems** | `Linux Kernel 6.x` · `eBPF (BCC/libbpf)` · `C / C++` · `Go` · `epoll WAS` · `VirtIO` |
+| **Cloud Native &amp; K8s** | `Kubernetes (Multi-Cluster)` · `Tart VM (Apple Silicon)` · `ArgoCD GitOps` · `Cilium CNI` · `MetalLB` |
+| **SecOps &amp; IaC** | `Terraform` · `Ansible` · `Trivy CVE Gating` · `Falco Runtime` · `Kyverno` · `HashiCorp Vault` |
+| **Production Metrics** | **&lt; 1.2μs** hook latency · **100k+ SYN/s** mitigated · **99.9%** K8s SLA · **10,000+** conn |
 
 <br/>
 
-###  Flagship Production & Research Showcases
+### 🚀 Flagship Production &amp; Research Showcases
 
 <p align="center">
   <a href="https://github.com/iamywl/ebpf_NSR">
-    <img src="./assets/card_ebpf_nsr.svg" width="49%" alt="ebpf_NSR - Kernel Attack Detection System via eBPF & ML" />
+    <img src="./assets/card_ebpf_nsr.svg" width="49%" alt="ebpf_NSR - Kernel Attack Detection System via eBPF &amp; ML" />
   </a>
   <a href="https://github.com/iamywl/service_infra">
     <img src="./assets/card_service_infra.svg" width="49%" alt="service_infra - Tart VM Multi-Cluster K8s" />
@@ -58,10 +58,30 @@
 
 <br/>
 
-###  Architectural Deep-Dives & Engineering Specifications
+### 🛠️ Technical Arsenal (Bento Architecture)
+
+<p align="center">
+  <img src="./assets/bento_tech_matrix.svg" width="100%" alt="Technical Arsenal Bento Grid" />
+</p>
+
+<br/>
+
+### 📊 Production Telemetry &amp; Activity Radar
+
+<p align="center">
+  <img src="./assets/system_telemetry.svg" width="100%" alt="System Telemetry &amp; Production Metrics" />
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/iamywl/iamywl/output/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub Contribution Grid Snake" />
+</p>
+
+<br/>
+
+### 🔍 Architectural Deep-Dives &amp; Verified Specifications
 
 <details>
-<summary><b>🔍 Deep Dive 01: ebpf_NSR · Kernel Defense & Runtime Security</b></summary>
+<summary><b>🔍 Deep Dive 01: ebpf_NSR · Kernel Defense &amp; Runtime Security</b></summary>
 
 > **Problem Statement:** User-space intrusion detection systems (IDS) incur heavy context-switch penalties (>15% CPU) and cannot intercept evasive kernel-level syscall anomalies in real-time.
 
@@ -71,7 +91,7 @@
 
 | Telemetry Dimension | Benchmark / SLA Target | Verified Production Metric | Status |
 | :--- | :--- | :--- | :--- |
-| **Hook Execution Latency** | `< 5.0 μs` | **`< 1.2 μs`** | 🟢 Optimized |
+| **Hook Execution Latency** | `< 5.0 μs` | **`< 1.2 μs`** | 🟢 In-Budget |
 | **Threat Mitigation Rate** | `> 50,000 SYN/s` | **`100,000+ SYN/s mitigated`** | 🟢 Saturation Proof |
 | **CPU Footprint** | `< 5.0% CPU overhead` | **`< 1.8% CPU`** | 🟢 Low Overhead |
 
@@ -112,7 +132,7 @@
 </details>
 
 <details>
-<summary><b>🔍 Deep Dive 04: devsecops · 4-Cluster Homelab & GitOps Security Platform</b></summary>
+<summary><b>🔍 Deep Dive 04: devsecops · 4-Cluster Homelab &amp; GitOps Security Platform</b></summary>
 
 > **Problem Statement:** Cloud native supply chains are vulnerable to unvetted container images, privilege escalation, secret leakage, and cluster runtime drift.
 
@@ -164,29 +184,9 @@
 
 <br/>
 
-###  Technical Arsenal (Bento Architecture)
-
-<p align="center">
-  <img src="./assets/bento_tech_matrix.svg" width="100%" alt="Technical Arsenal Bento Grid" />
-</p>
-
-<br/>
-
-###  Production Telemetry & Activity Radar
-
-<p align="center">
-  <img src="./assets/system_telemetry.svg" width="100%" alt="System Telemetry & Production Metrics" />
-</p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/iamywl/iamywl/output/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub Contribution Grid Snake" />
-</p>
-
-<br/>
-
 <div align="center">
 
-<!-- Apple & Toss Minimalist Footer -->
-<img src="./assets/apple_footer.svg" width="100%" alt="visionOS Footer" />
+<!-- Clean Minimalist Footer -->
+<img src="./assets/apple_footer.svg" width="100%" alt="Designed for @iamywl" />
 
 </div>

@@ -1,238 +1,111 @@
 <svg width="850" height="380" viewBox="0 0 850 380" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Outer Background Gradient -->
-    <linearGradient id="matrixBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#080D1A" />
-      <stop offset="50%" stop-color="#030509" />
-      <stop offset="100%" stop-color="#060914" />
+    <linearGradient id="bentoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
     </linearGradient>
-
-    <!-- visionOS Specular Rim Gradient (135°) -->
-    <linearGradient id="outerRim" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.32" />
-      <stop offset="35%" stop-color="#3182F6" stop-opacity="0.25" />
-      <stop offset="70%" stop-color="#06B6D4" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05" />
-    </linearGradient>
-
-    <!-- Sub-card Glass Background -->
-    <linearGradient id="subCardBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0F172A" stop-opacity="0.45" />
-      <stop offset="100%" stop-color="#090E17" stop-opacity="0.65" />
-    </linearGradient>
-
-    <linearGradient id="subCardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.16" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.04" />
-    </linearGradient>
-
-    <!-- Tech Pill Background -->
-    <linearGradient id="techPillBg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.75" />
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.85" />
-    </linearGradient>
-
-    <!-- Sheen Gradient -->
-    <linearGradient id="matrixSheen" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
-    </linearGradient>
-
-    <clipPath id="matrixClip">
-      <rect x="1" y="1" width="848" height="378" rx="24" />
-    </clipPath>
-
-    <style>
-      @keyframes matrixSheenSweep {
-        0% { transform: translateX(-150%) skewX(-20deg); opacity: 0; }
-        20% { opacity: 0.5; }
-        55% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
-        100% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
-      }
-      .matrix-sheen {
-        animation: matrixSheenSweep 9s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-      }
-    </style>
+    <filter id="bentoShadow" x="-1%" y="-2%" width="102%" height="106%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="14" flood-color="#0F172A" flood-opacity="0.04" />
+    </filter>
   </defs>
 
   <!-- Container Unibody -->
-  <rect x="1" y="1" width="848" height="378" rx="24" fill="url(#matrixBg)" stroke="url(#outerRim)" stroke-width="1.2" />
+  <rect x="2" y="2" width="846" height="376" rx="20" fill="url(#bentoBg)" stroke="#E2E8F0" stroke-width="1.2" filter="url(#bentoShadow)" />
 
-  <!-- Sheen Sweep -->
-  <g clip-path="url(#matrixClip)">
-    <rect class="matrix-sheen" x="0" y="0" width="180" height="380" fill="url(#matrixSheen)" />
-  </g>
-
-  <!-- ================= SUB-CARD 1: KERNEL & RUNTIME SECURITY (Top-Left) ================= -->
+  <!-- Sub-Card 1: Kernel & Systems (Top-Left) -->
   <g transform="translate(18, 18)">
-    <rect width="398" height="164" rx="16" fill="url(#subCardBg)" stroke="url(#subCardBorder)" stroke-width="1" />
-    
-    <!-- Header & Subtitle -->
-    <text x="20" y="32" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#38BDF8">
-      🛡️ KERNEL &amp; RUNTIME SECURITY
+    <rect width="398" height="164" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="18" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="13" font-weight="700" fill="#2563EB">
+      🛡️ KERNEL &amp; SYSTEMS PERFORMANCE
     </text>
-    <text x="20" y="50" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#64748B">
+    <text x="18" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#64748B">
       eBPF Syscall Tracing · Kernel Exploit Mitigation
     </text>
-
-    <!-- Pills Row 1 -->
-    <g transform="translate(20, 68)">
-      <!-- Pill 1 -->
-      <rect x="0" y="0" width="124" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="62" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Linux Kernel 6.x</text>
-
-      <!-- Pill 2 -->
-      <rect x="132" y="0" width="112" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="188" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">eBPF (libbpf)</text>
-
-      <!-- Pill 3 -->
-      <rect x="252" y="0" width="104" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="304" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Syscall Audit</text>
+    <!-- Pills -->
+    <g transform="translate(18, 66)">
+      <rect width="94" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="47" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Linux 6.x</text>
+      <rect x="102" width="100" height="24" rx="6" fill="#EFF6FF" stroke="#DBEAFE" /><text x="152" y="16" font-family="Pretendard" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">eBPF / BCC</text>
+      <rect x="210" width="84" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="252" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">C / C++</text>
+      <rect x="302" width="76" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="340" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Go</text>
     </g>
-
-    <!-- Pills Row 2 -->
-    <g transform="translate(20, 106)">
-      <!-- Pill 4 -->
-      <rect x="0" y="0" width="136" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="68" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Zero-Trust Gating</text>
-
-      <!-- Pill 5 -->
-      <rect x="144" y="0" width="108" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="198" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Falco Runtime</text>
-
-      <!-- Pill 6 -->
-      <rect x="260" y="0" width="96" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="308" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Cilium CNI</text>
+    <g transform="translate(18, 100)">
+      <rect width="110" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="55" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">epoll Reactor</text>
+      <rect x="118" width="124" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="180" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Tracepoints / XDP</text>
+      <rect x="250" width="110" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="305" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">kprobe / ringbuf</text>
     </g>
+    <text x="18" y="146" font-family="Pretendard" font-size="10.5" font-weight="600" fill="#059669">⚡ Target: &lt; 1.2μs hook latency &amp; 100k+ pkts/s line-rate</text>
   </g>
 
-  <!-- ================= SUB-CARD 2: CLOUD NATIVE & ARM64 IAC (Top-Right) ================= -->
+  <!-- Sub-Card 2: Cloud Native & Virtualization (Top-Right) -->
   <g transform="translate(434, 18)">
-    <rect width="398" height="164" rx="16" fill="url(#subCardBg)" stroke="url(#subCardBorder)" stroke-width="1" />
-    
-    <!-- Header & Subtitle -->
-    <text x="20" y="32" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#60A5FA">
-      ☁️ CLOUD NATIVE &amp; ARM64 IAC
+    <rect width="398" height="164" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="18" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="13" font-weight="700" fill="#2563EB">
+      ☁️ CLOUD NATIVE &amp; ARM64 VIRTUALIZATION
     </text>
-    <text x="20" y="50" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#64748B">
-      Multi-Cluster K8s · Declarative GitOps
+    <text x="18" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#64748B">
+      Apple Silicon Multi-Cluster K8s · Declarative GitOps
     </text>
-
-    <!-- Pills Row 1 -->
-    <g transform="translate(20, 68)">
-      <!-- Pill 1 -->
-      <rect x="0" y="0" width="138" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="69" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Multi-Cluster K8s</text>
-
-      <!-- Pill 2 -->
-      <rect x="146" y="0" width="128" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="210" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Tart VM (ARM64)</text>
-
-      <!-- Pill 3 -->
-      <rect x="282" y="0" width="76" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="320" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Terraform</text>
+    <!-- Pills -->
+    <g transform="translate(18, 66)">
+      <rect width="112" height="24" rx="6" fill="#EFF6FF" stroke="#DBEAFE" /><text x="56" y="16" font-family="Pretendard" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">Kubernetes</text>
+      <rect x="120" width="94" height="24" rx="6" fill="#F0FDF4" stroke="#DCFCE7" /><text x="167" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#166534" text-anchor="middle">Tart VM</text>
+      <rect x="222" width="78" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="261" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Docker</text>
+      <rect x="308" width="70" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="343" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Helm</text>
     </g>
-
-    <!-- Pills Row 2 -->
-    <g transform="translate(20, 106)">
-      <!-- Pill 4 -->
-      <rect x="0" y="0" width="118" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="59" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">ArgoCD GitOps</text>
-
-      <!-- Pill 5 -->
-      <rect x="126" y="0" width="108" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="180" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Docker Core</text>
-
-      <!-- Pill 6 -->
-      <rect x="242" y="0" width="116" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="300" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">MetalLB Ingress</text>
+    <g transform="translate(18, 100)">
+      <rect width="90" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="45" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">ArgoCD</text>
+      <rect x="98" width="96" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="146" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">MetalLB L2</text>
+      <rect x="202" width="94" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="249" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Cilium CNI</text>
+      <rect x="304" width="74" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="341" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">HPA</text>
     </g>
+    <text x="18" y="146" font-family="Pretendard" font-size="10.5" font-weight="600" fill="#059669">☁️ 4-Node Cluster SLA: 99.9% Uptime with 0-Downtime Rollover</text>
   </g>
 
-  <!-- ================= SUB-CARD 3: OBSERVABILITY & RELIABILITY (Bottom-Left) ================= -->
+  <!-- Sub-Card 3: DevSecOps & Zero-Trust (Bottom-Left) -->
   <g transform="translate(18, 198)">
-    <rect width="398" height="164" rx="16" fill="url(#subCardBg)" stroke="url(#subCardBorder)" stroke-width="1" />
-    
-    <!-- Header & Subtitle -->
-    <text x="20" y="32" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#34D399">
-      📈 OBSERVABILITY &amp; RELIABILITY
+    <rect width="398" height="164" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="18" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="13" font-weight="700" fill="#4F46E5">
+      🔒 DEVSECOPS &amp; ZERO-TRUST GOVERNANCE
     </text>
-    <text x="20" y="50" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#64748B">
-      APM · Distributed Tracing · 99.9% Uptime SLA
+    <text x="18" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#64748B">
+      Shift-Left CI/CD · Kernel Syscall Runtime Auditing
     </text>
-
-    <!-- Pills Row 1 -->
-    <g transform="translate(20, 68)">
-      <!-- Pill 1 -->
-      <rect x="0" y="0" width="138" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="69" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Prometheus APM</text>
-
-      <!-- Pill 2 -->
-      <rect x="146" y="0" width="132" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="212" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Grafana Telemetry</text>
-
-      <!-- Pill 3 -->
-      <rect x="286" y="0" width="72" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="322" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">OTel APM</text>
+    <!-- Pills -->
+    <g transform="translate(18, 66)">
+      <rect width="104" height="24" rx="6" fill="#EEF2FF" stroke="#E0E7FF" /><text x="52" y="16" font-family="Pretendard" font-size="11" font-weight="700" fill="#4F46E5" text-anchor="middle">Terraform</text>
+      <rect x="112" width="76" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="150" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Trivy</text>
+      <rect x="196" width="76" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="234" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Falco</text>
+      <rect x="280" width="86" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="323" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Kyverno</text>
     </g>
-
-    <!-- Pills Row 2 -->
-    <g transform="translate(20, 106)">
-      <!-- Pill 4 -->
-      <rect x="0" y="0" width="128" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="64" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">99.9% HA SLA</text>
-
-      <!-- Pill 5 -->
-      <rect x="136" y="0" width="124" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="198" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Chaos Testing</text>
-
-      <!-- Pill 6 -->
-      <rect x="268" y="0" width="90" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="313" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">AlertMgr</text>
+    <g transform="translate(18, 100)">
+      <rect width="124" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="62" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">HashiCorp Vault</text>
+      <rect x="132" width="94" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="179" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Cloud-Init</text>
+      <rect x="234" width="84" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="276" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Ansible</text>
     </g>
+    <text x="18" y="146" font-family="Pretendard" font-size="10.5" font-weight="600" fill="#4F46E5">🔒 100% Automated Critical CVE Gating &amp; Zero-Root Enforcement</text>
   </g>
 
-  <!-- ================= SUB-CARD 4: SYSTEMS & HIGH CONCURRENCY (Bottom-Right) ================= -->
+  <!-- Sub-Card 4: Observability & Backend (Bottom-Right) -->
   <g transform="translate(434, 198)">
-    <rect width="398" height="164" rx="16" fill="url(#subCardBg)" stroke="url(#subCardBorder)" stroke-width="1" />
-    
-    <!-- Header & Subtitle -->
-    <text x="20" y="32" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="13" font-weight="700" letter-spacing="0.06em" fill="#FBBF24">
-      ⚡ SYSTEMS &amp; HIGH CONCURRENCY
+    <rect width="398" height="164" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="18" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="13" font-weight="700" fill="#0D9488">
+      📊 OBSERVABILITY &amp; HIGH-SCALE BACKEND
     </text>
-    <text x="20" y="50" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#64748B">
-      Linux epoll Reactor · Event-Driven WAS · C / Go
+    <text x="18" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#64748B">
+      Full-Stack Telemetry · Microservice Distributed Caching
     </text>
-
-    <!-- Pills Row 1 -->
-    <g transform="translate(20, 68)">
-      <!-- Pill 1 -->
-      <rect x="0" y="0" width="134" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="67" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">epoll Reactor WAS</text>
-
-      <!-- Pill 2 -->
-      <rect x="142" y="0" width="112" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="198" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">C / C++17</text>
-
-      <!-- Pill 3 -->
-      <rect x="262" y="0" width="96" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="310" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Go 1.22+</text>
+    <!-- Pills -->
+    <g transform="translate(18, 66)">
+      <rect width="104" height="24" rx="6" fill="#CCFBF1" stroke="#99F6E4" /><text x="52" y="16" font-family="Pretendard" font-size="11" font-weight="700" fill="#0F766E" text-anchor="middle">Prometheus</text>
+      <rect x="112" width="80" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="152" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Grafana</text>
+      <rect x="200" width="86" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="243" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Redis Caching</text>
+      <rect x="294" width="76" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="332" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">PostgreSQL</text>
     </g>
-
-    <!-- Pills Row 2 -->
-    <g transform="translate(20, 106)">
-      <!-- Pill 4 -->
-      <rect x="0" y="0" width="138" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="69" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Redis Cache Cluster</text>
-
-      <!-- Pill 5 -->
-      <rect x="146" y="0" width="110" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="201" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">POSIX Sockets</text>
-
-      <!-- Pill 6 -->
-      <rect x="264" y="0" width="94" height="26" rx="8" fill="url(#techPillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="311" y="17" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="11" font-weight="600" fill="#E2E8F0" text-anchor="middle">Zero-Copy I/O</text>
+    <g transform="translate(18, 100)">
+      <rect width="104" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="52" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Spring Boot</text>
+      <rect x="112" width="76" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="150" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Kafka</text>
+      <rect x="196" width="100" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="246" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">OpenTelemetry</text>
     </g>
+    <text x="18" y="146" font-family="Pretendard" font-size="10.5" font-weight="600" fill="#0D9488">⚡ 10k+ Concurrency &amp; 94%+ Redis Hit Ratio under Traffic Spikes</text>
   </g>
 </svg>

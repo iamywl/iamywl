@@ -1,151 +1,82 @@
 <svg width="415" height="240" viewBox="0 0 415 240" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B101D" />
-      <stop offset="55%" stop-color="#060911" />
-      <stop offset="100%" stop-color="#030508" />
+    <!-- Soft White Ceramic Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
     </linearGradient>
 
-    <!-- visionOS Specular Rim Gradient (135°) -->
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35" />
-      <stop offset="30%" stop-color="#3182F6" stop-opacity="0.30" />
-      <stop offset="70%" stop-color="#06B6D4" stop-opacity="0.18" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05" />
+    <!-- Hairline Border -->
+    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#CBD5E1" />
     </linearGradient>
 
-    <!-- Ambient Glow: Toss Blue -->
-    <radialGradient id="cardGlow" cx="88%" cy="12%" r="65%">
-      <stop offset="0%" stop-color="#3182F6" stop-opacity="0.22" />
-      <stop offset="60%" stop-color="#06B6D4" stop-opacity="0.04" />
-      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
-    </radialGradient>
-
-    <!-- Telemetry Box Background -->
-    <linearGradient id="telemBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3182F6" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#06B6D4" stop-opacity="0.04" />
-    </linearGradient>
-
-    <linearGradient id="telemBorder" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#38BDF8" stop-opacity="0.45" />
-      <stop offset="100%" stop-color="#3182F6" stop-opacity="0.20" />
-    </linearGradient>
-
-    <!-- Stack Pill Background -->
-    <linearGradient id="pillBg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.65" />
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.75" />
-    </linearGradient>
-
-    <!-- Sheen Gradient -->
-    <linearGradient id="sheen" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.15" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
-    </linearGradient>
-
-    <clipPath id="cardClip">
-      <rect x="1" y="1" width="413" height="238" rx="20" />
-    </clipPath>
-
-    <style>
-      @keyframes cardSheen {
-        0% { transform: translateX(-150%) skewX(-20deg); opacity: 0; }
-        25% { opacity: 0.6; }
-        60% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
-        100% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
-      }
-      @keyframes telemPulse {
-        0%, 100% { filter: drop-shadow(0 0 2px rgba(56, 189, 248, 0.25)); }
-        50% { filter: drop-shadow(0 0 7px rgba(6, 182, 212, 0.55)); }
-      }
-      .card-sheen-sweep {
-        animation: cardSheen 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-      }
-      .telem-box {
-        animation: telemPulse 3.5s ease-in-out infinite;
-      }
-    </style>
+    <filter id="cardShadow" x="-3%" y="-3%" width="106%" height="110%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.04" />
+    </filter>
   </defs>
 
-  <!-- Unibody Card Canvas -->
-  <rect x="1" y="1" width="413" height="238" rx="20" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.2" />
-  <rect x="1" y="1" width="413" height="238" rx="20" fill="url(#cardGlow)" />
+  <!-- Card Body -->
+  <rect x="2" y="2" width="411" height="236" rx="18" fill="url(#cardBg)" stroke="url(#cardBorder)" stroke-width="1.2" filter="url(#cardShadow)" />
 
-  <!-- Sheen Sweep -->
-  <g clip-path="url(#cardClip)">
-    <rect class="card-sheen-sweep" x="0" y="0" width="120" height="240" fill="url(#sheen)" />
-  </g>
-
-  <!-- Top Domain Pill -->
-  <g transform="translate(20, 20)">
-    <rect width="148" height="22" rx="11" fill="#3182F6" fill-opacity="0.15" stroke="#3182F6" stroke-opacity="0.4" stroke-width="0.8" />
-    <text x="74" y="15" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.08em" fill="#38BDF8" text-anchor="middle">
+  <!-- Top Badge -->
+  <g transform="translate(20, 18)">
+    <rect width="140.8" height="24" rx="12" fill="#EFF6FF" stroke="#DBEAFE" stroke-width="1" />
+    <text x="12" y="16.5" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="10.5" font-weight="700" letter-spacing="0.04em" fill="#2563EB">
       🛡️ KERNEL DEFENSE
     </text>
   </g>
 
-  <!-- Repository Action Arrow Link -->
-  <g transform="translate(367, 18)">
-    <circle cx="14" cy="14" r="14" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="0.8" />
-    <path d="M10 18L18 10M18 10H12M18 10V16" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Arrow Link Button -->
+  <g transform="translate(365, 18)">
+    <circle cx="15" cy="12" r="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+    <path d="M12 9l6 0m0 0l0 6m0-6l-7 7" stroke="#3182F6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
   </g>
 
-  <!-- Title: ebpf_NSR -->
-  <text x="20" y="74" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="20" font-weight="800" letter-spacing="-0.02em" fill="#FFFFFF">
+  <!-- Project Title -->
+  <text x="20" y="74" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', 'SF Pro Display', sans-serif" font-size="20" font-weight="800" letter-spacing="-0.025em" fill="#0F172A">
     ebpf_NSR
   </text>
 
-  <!-- Subtitle -->
-  <text x="20" y="96" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="12" font-weight="600" letter-spacing="-0.01em" fill="#38BDF8">
-    Kernel Attack Detection via eBPF &amp; ML
+  <!-- Domain Subtitle (Toss Blue) -->
+  <text x="20" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="12" font-weight="600" fill="#2563EB">
+    Kernel Attack Detection System via eBPF &amp; ML
   </text>
 
-  <!-- Architecture Highlights -->
-  <text x="20" y="118" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#94A3B8">
+  <!-- Bullet Points (Slate) -->
+  <text x="20" y="116" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11.5" font-weight="400" fill="#334155">
     • sys_enter / kprobe zero-copy ring-buffer tracepoint pipeline
   </text>
-  <text x="20" y="134" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#94A3B8">
+  <text x="20" y="134" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11.5" font-weight="400" fill="#334155">
     • In-kernel ML isolation forest flags anomalous container breakout
   </text>
 
-  <!-- Dedicated Telemetry Glass Box -->
-  <g class="telem-box" transform="translate(20, 148)">
-    <rect width="375" height="32" rx="8" fill="url(#telemBg)" stroke="url(#telemBorder)" stroke-width="1" />
-    <!-- Metric 1 -->
-    <text x="14" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#E2E8F0">
-      ⚡ HOOK LATENCY: <tspan fill="#38BDF8" font-weight="800">&lt; 1.2μs</tspan>
-    </text>
-    <line x1="188" y1="8" x2="188" y2="24" stroke="#334155" stroke-width="1" />
-    <!-- Metric 2 -->
-    <text x="200" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#E2E8F0">
-      🛡️ THREAT MITIGATED: <tspan fill="#34D399" font-weight="800">100k+ SYN/s</tspan>
-    </text>
+  <!-- Clean Telemetry Box -->
+  <g transform="translate(20, 148)">
+    <rect width="375" height="30" rx="8" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1" />
+    <text x="14" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="600" fill="#334155">⚡ HOOK LATENCY: <tspan fill="#2563EB" font-weight="700">&lt; 1.2μs</tspan> &#160;&#160;|&#160;&#160; 🛡️ MITIGATED: <tspan fill="#059669" font-weight="700">100k+ SYN/s</tspan></text>
   </g>
 
-  <!-- Bottom Tech Stack Chips -->
-  <g transform="translate(20, 196)">
-    <!-- Pill 1: eBPF -->
-    <g transform="translate(0, 0)">
-      <rect width="54" height="24" rx="7" fill="url(#pillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="27" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">eBPF</text>
-    </g>
-    <!-- Pill 2: Linux 6.x -->
-    <g transform="translate(62, 0)">
-      <rect width="76" height="24" rx="7" fill="url(#pillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="38" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">Linux 6.x</text>
-    </g>
-    <!-- Pill 3: Python / BCC -->
-    <g transform="translate(146, 0)">
-      <rect width="102" height="24" rx="7" fill="url(#pillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="51" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">Python / BCC</text>
-    </g>
-    <!-- Pill 4: ML Inference -->
-    <g transform="translate(256, 0)">
-      <rect width="102" height="24" rx="7" fill="url(#pillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="51" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">ML Inference</text>
-    </g>
+  <!-- Tech Stack Pills -->
+  <g transform="translate(0, 192)">
+    
+        <g transform="translate(20, 0)">
+          <rect width="54.0" height="26" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+          <text x="27.0" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">eBPF</text>
+        </g>
+        <g transform="translate(82.0, 0)">
+          <rect width="91.5" height="26" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+          <text x="45.75" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">Linux 6.x</text>
+        </g>
+        <g transform="translate(181.5, 0)">
+          <rect width="114.0" height="26" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+          <text x="57.0" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">Python / BCC</text>
+        </g>
+        <g transform="translate(303.5, 0)">
+          <rect width="114.0" height="26" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+          <text x="57.0" y="17" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="600" fill="#475569" text-anchor="middle">ML Inference</text>
+        </g>
   </g>
 </svg>

@@ -1,151 +1,126 @@
 <svg width="415" height="240" viewBox="0 0 415 240" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Gradient -->
-    <linearGradient id="bgGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0E1225" />
-      <stop offset="55%" stop-color="#080B17" />
-      <stop offset="100%" stop-color="#03050C" />
+    <!-- Ceramic White Card Background -->
+    <linearGradient id="brightCardBg6" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
     </linearGradient>
 
-    <!-- visionOS Specular Rim Gradient (135°) -->
-    <linearGradient id="borderGrad6" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35" />
-      <stop offset="30%" stop-color="#6366F1" stop-opacity="0.30" />
-      <stop offset="70%" stop-color="#38BDF8" stop-opacity="0.18" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05" />
+    <!-- Apple Specular Bevel Rim (135°) -->
+    <linearGradient id="brightBorder6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="35%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#CBD5E1" />
     </linearGradient>
 
-    <!-- Ambient Glow: Indigo / Blue Accent -->
-    <radialGradient id="cardGlow6" cx="88%" cy="12%" r="65%">
-      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.22" />
-      <stop offset="60%" stop-color="#38BDF8" stop-opacity="0.04" />
-      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    <!-- Subtle Ambient Underglow: Toss Blue Refraction -->
+    <radialGradient id="tossGlow6" cx="90%" cy="10%" r="60%">
+      <stop offset="0%" stop-color="#3182F6" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#3182F6" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Telemetry Box Background -->
-    <linearGradient id="telemBg6" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#6366F1" stop-opacity="0.12" />
-      <stop offset="100%" stop-color="#38BDF8" stop-opacity="0.04" />
-    </linearGradient>
-
-    <linearGradient id="telemBorder6" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#818CF8" stop-opacity="0.45" />
-      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.20" />
-    </linearGradient>
-
-    <!-- Stack Pill Background -->
-    <linearGradient id="pillBg6" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.65" />
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.75" />
-    </linearGradient>
-
-    <!-- Sheen Gradient -->
-    <linearGradient id="sheen6" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Sheen Gradient for Bright Glass -->
+    <linearGradient id="brightSheen6" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.15" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.65" />
       <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
     </linearGradient>
 
     <clipPath id="cardClip6">
-      <rect x="1" y="1" width="413" height="238" rx="20" />
+      <rect x="1" y="1" width="413" height="238" rx="18" />
     </clipPath>
 
     <style>
       @keyframes cardSheen6 {
         0% { transform: translateX(-150%) skewX(-20deg); opacity: 0; }
-        25% { opacity: 0.6; }
-        60% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+        20% { opacity: 0.8; }
+        55% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
         100% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
       }
-      @keyframes telemPulse6 {
-        0%, 100% { filter: drop-shadow(0 0 2px rgba(129, 140, 248, 0.25)); }
-        50% { filter: drop-shadow(0 0 7px rgba(99, 102, 241, 0.55)); }
-      }
-      .card-sheen-sweep6 {
+      .sheen-sweep6 {
         animation: cardSheen6 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-      }
-      .telem-box6 {
-        animation: telemPulse6 3.5s ease-in-out infinite;
+        animation-delay: 6.5s;
       }
     </style>
   </defs>
 
-  <!-- Unibody Card Canvas -->
-  <rect x="1" y="1" width="413" height="238" rx="20" fill="url(#bgGrad6)" stroke="url(#borderGrad6)" stroke-width="1.2" />
-  <rect x="1" y="1" width="413" height="238" rx="20" fill="url(#cardGlow6)" />
+  <!-- Card Surface with Specular Rim & Ambient Glow -->
+  <rect x="1" y="1" width="413" height="238" rx="18" fill="url(#brightCardBg6)" stroke="url(#brightBorder6)" stroke-width="1.2" />
+  <rect x="1" y="1" width="413" height="238" rx="18" fill="url(#tossGlow6)" />
 
-  <!-- Sheen Sweep -->
+  <!-- Shimmering Specular Sheen -->
   <g clip-path="url(#cardClip6)">
-    <rect class="card-sheen-sweep6" x="0" y="0" width="120" height="240" fill="url(#sheen6)" />
+    <rect class="sheen-sweep6" x="0" y="0" width="120" height="240" fill="url(#brightSheen6)" />
   </g>
 
-  <!-- Top Domain Pill -->
-  <g transform="translate(20, 20)">
-    <rect width="168" height="22" rx="11" fill="#6366F1" fill-opacity="0.15" stroke="#6366F1" stroke-opacity="0.4" stroke-width="0.8" />
-    <text x="84" y="15" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.08em" fill="#818CF8" text-anchor="middle">
+  <!-- Top Domain Capsule: SCALABLE CLUSTER -->
+  <g transform="translate(20, 18)">
+    <rect width="158" height="24" rx="12" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+    <text x="79" y="16.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.08em" fill="#1D4ED8" text-anchor="middle">
       🌐 SCALABLE CLUSTER
     </text>
   </g>
 
-  <!-- Repository Action Arrow Link -->
-  <g transform="translate(367, 18)">
-    <circle cx="14" cy="14" r="14" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="0.8" />
-    <path d="M10 18L18 10M18 10H12M18 10V16" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Action Arrow Link Button -->
+  <g transform="translate(367, 16)">
+    <circle cx="14" cy="14" r="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+    <path d="M10 18L18 10M18 10H12M18 10V16" stroke="#64748B" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
   </g>
 
-  <!-- Title: ROMA -->
-  <text x="20" y="74" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="20" font-weight="800" letter-spacing="-0.02em" fill="#FFFFFF">
+  <!-- Repository Title -->
+  <text x="20" y="74" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="20" font-weight="800" letter-spacing="-0.025em" fill="#0F172A">
     ROMA
   </text>
 
-  <!-- Subtitle -->
-  <text x="20" y="96" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="12" font-weight="600" letter-spacing="-0.01em" fill="#818CF8">
+  <!-- Headline Subtitle -->
+  <text x="20" y="96" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="12" font-weight="600" letter-spacing="-0.01em" fill="#2563EB">
     Scalable Roommate Matching Cloud Backend
   </text>
 
-  <!-- Architecture Highlights -->
-  <text x="20" y="118" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#94A3B8">
+  <!-- Architectural Narrative -->
+  <text x="20" y="118" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#475569">
     • Microservice cluster with Kubernetes Horizontal Pod Autoscaler
   </text>
-  <text x="20" y="134" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#94A3B8">
+  <text x="20" y="134" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#475569">
     • Multi-tiered Redis distributed caching preventing DB read spikes
   </text>
 
-  <!-- Dedicated Telemetry Glass Box -->
-  <g class="telem-box6" transform="translate(20, 148)">
-    <rect width="375" height="32" rx="8" fill="url(#telemBg6)" stroke="url(#telemBorder6)" stroke-width="1" />
+  <!-- Recruiter Telemetry Glass Box -->
+  <g transform="translate(20, 148)">
+    <rect width="375" height="34" rx="9" fill="#F0F7FF" stroke="#BFDBFE" stroke-width="1" />
     <!-- Metric 1 -->
-    <text x="14" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#E2E8F0">
-      ⚡ LATENCY: <tspan fill="#818CF8" font-weight="800">p95 &lt; 38ms</tspan>
+    <text x="14" y="21.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#334155">
+      ⚡ LATENCY: <tspan fill="#2563EB" font-weight="800">p95 &lt; 38ms</tspan>
     </text>
-    <line x1="175" y1="8" x2="175" y2="24" stroke="#334155" stroke-width="1" />
+    <!-- Divider -->
+    <line x1="168" y1="9" x2="168" y2="25" stroke="#CBD5E1" stroke-width="1" />
     <!-- Metric 2 -->
-    <text x="188" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#E2E8F0">
-      💾 CACHE HIT: <tspan fill="#34D399" font-weight="800">94%+ Redis Hit</tspan>
+    <text x="180" y="21.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#334155">
+      💾 CACHE HIT: <tspan fill="#059669" font-weight="800">94%+ Redis Hit</tspan>
     </text>
   </g>
 
-  <!-- Bottom Tech Stack Chips -->
+  <!-- Bottom Tech Stack Pills -->
   <g transform="translate(20, 196)">
-    <!-- Pill 1: Cloud Native -->
+    <!-- Pill 1 -->
     <g transform="translate(0, 0)">
-      <rect width="88" height="24" rx="7" fill="url(#pillBg6)" stroke="#334155" stroke-width="0.8" />
-      <text x="44" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">Cloud Native</text>
+      <rect width="90" height="24" rx="7" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="45" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="middle">Cloud Native</text>
     </g>
-    <!-- Pill 2: Redis Cache -->
-    <g transform="translate(96, 0)">
-      <rect width="84" height="24" rx="7" fill="url(#pillBg6)" stroke="#334155" stroke-width="0.8" />
-      <text x="42" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">Redis Cache</text>
+    <!-- Pill 2 -->
+    <g transform="translate(98, 0)">
+      <rect width="86" height="24" rx="7" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="43" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="middle">Redis Cache</text>
     </g>
-    <!-- Pill 3: Microservices -->
-    <g transform="translate(188, 0)">
-      <rect width="90" height="24" rx="7" fill="url(#pillBg6)" stroke="#334155" stroke-width="0.8" />
-      <text x="45" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">Microservices</text>
+    <!-- Pill 3 -->
+    <g transform="translate(192, 0)">
+      <rect width="92" height="24" rx="7" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="46" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="middle">Microservices</text>
     </g>
-    <!-- Pill 4: PostgreSQL -->
-    <g transform="translate(286, 0)">
-      <rect width="78" height="24" rx="7" fill="url(#pillBg6)" stroke="#334155" stroke-width="0.8" />
-      <text x="39" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">PostgreSQL</text>
+    <!-- Pill 4 -->
+    <g transform="translate(292, 0)">
+      <rect width="82" height="24" rx="7" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text x="41" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#334155" text-anchor="middle">PostgreSQL</text>
     </g>
   </g>
 </svg>
