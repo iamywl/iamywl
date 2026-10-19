@@ -1,0 +1,103 @@
+<svg width="850" height="380" viewBox="0 0 850 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bentoBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
+    </linearGradient>
+  </defs>
+
+  <rect x="2" y="2" width="846" height="376" rx="20" fill="url(#bentoBg)" stroke="#E2E8F0" stroke-width="1.2" />
+
+  <!-- Sub-Card 1 -->
+  <g transform="translate(18, 18)">
+    <rect width="398" height="164" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="18" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="13" font-weight="700" fill="#2563EB">
+      🛡️ KERNEL &amp; SYSTEMS PERFORMANCE
+    </text>
+    <text x="18" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#64748B">
+      eBPF Syscall Tracing · Kernel Exploit Mitigation
+    </text>
+    <g transform="translate(18, 66)">
+      <rect width="94" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="47" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Linux 6.x</text>
+      <rect x="102" width="100" height="24" rx="6" fill="#EFF6FF" stroke="#DBEAFE" /><text x="152" y="16" font-family="Pretendard" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">eBPF / BCC</text>
+      <rect x="210" width="84" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="252" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">C / C++</text>
+      <rect x="302" width="76" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="340" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Go</text>
+    </g>
+    <g transform="translate(18, 100)">
+      <rect width="110" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="55" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">epoll Reactor</text>
+      <rect x="118" width="124" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="180" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Tracepoints / XDP</text>
+      <rect x="250" width="110" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="305" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">kprobe / ringbuf</text>
+    </g>
+    <text x="18" y="146" font-family="Pretendard" font-size="10.5" font-weight="600" fill="#059669">⚡ Target: &lt; 1.2μs hook latency &amp; 100k+ pkts/s line-rate</text>
+  </g>
+
+  <!-- Sub-Card 2 -->
+  <g transform="translate(434, 18)">
+    <rect width="398" height="164" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="18" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="13" font-weight="700" fill="#2563EB">
+      ☁️ CLOUD NATIVE &amp; ARM64 VIRTUALIZATION
+    </text>
+    <text x="18" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#64748B">
+      Apple Silicon Multi-Cluster K8s · Declarative GitOps
+    </text>
+    <g transform="translate(18, 66)">
+      <rect width="112" height="24" rx="6" fill="#EFF6FF" stroke="#DBEAFE" /><text x="56" y="16" font-family="Pretendard" font-size="11" font-weight="700" fill="#2563EB" text-anchor="middle">Kubernetes</text>
+      <rect x="120" width="94" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="167" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#059669" text-anchor="middle">Tart VM</text>
+      <rect x="222" width="78" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="261" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Docker</text>
+      <rect x="308" width="70" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="343" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Helm</text>
+    </g>
+    <g transform="translate(18, 100)">
+      <rect width="90" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="45" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">ArgoCD</text>
+      <rect x="98" width="96" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="146" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">MetalLB L2</text>
+      <rect x="202" width="94" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="249" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Cilium CNI</text>
+      <rect x="304" width="74" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="341" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">HPA</text>
+    </g>
+    <text x="18" y="146" font-family="Pretendard" font-size="10.5" font-weight="600" fill="#059669">☁️ 4-Node Cluster SLA: 99.9% Uptime with 0-Downtime Rollover</text>
+  </g>
+
+  <!-- Sub-Card 3 -->
+  <g transform="translate(18, 198)">
+    <rect width="398" height="164" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="18" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="13" font-weight="700" fill="#4F46E5">
+      🔒 DEVSECOPS &amp; ZERO-TRUST GOVERNANCE
+    </text>
+    <text x="18" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#64748B">
+      Shift-Left CI/CD · Kernel Syscall Runtime Auditing
+    </text>
+    <g transform="translate(18, 66)">
+      <rect width="104" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="52" y="16" font-family="Pretendard" font-size="11" font-weight="700" fill="#4F46E5" text-anchor="middle">Terraform</text>
+      <rect x="112" width="76" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="150" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Trivy</text>
+      <rect x="196" width="76" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="234" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Falco</text>
+      <rect x="280" width="86" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="323" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Kyverno</text>
+    </g>
+    <g transform="translate(18, 100)">
+      <rect width="124" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="62" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">HashiCorp Vault</text>
+      <rect x="132" width="94" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="179" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Cloud-Init</text>
+      <rect x="234" width="84" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="276" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Ansible</text>
+    </g>
+    <text x="18" y="146" font-family="Pretendard" font-size="10.5" font-weight="600" fill="#4F46E5">🔒 100% Automated Critical CVE Gating &amp; Zero-Root Enforcement</text>
+  </g>
+
+  <!-- Sub-Card 4 -->
+  <g transform="translate(434, 198)">
+    <rect width="398" height="164" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+    <text x="18" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="13" font-weight="700" fill="#0D9488">
+      📊 OBSERVABILITY &amp; HIGH-SCALE BACKEND
+    </text>
+    <text x="18" y="48" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#64748B">
+      Full-Stack Telemetry · Microservice Distributed Caching
+    </text>
+    <g transform="translate(18, 66)">
+      <rect width="104" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="52" y="16" font-family="Pretendard" font-size="11" font-weight="700" fill="#0D9488" text-anchor="middle">Prometheus</text>
+      <rect x="112" width="80" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="152" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Grafana</text>
+      <rect x="200" width="86" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="243" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Redis Caching</text>
+      <rect x="294" width="76" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="332" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">PostgreSQL</text>
+    </g>
+    <g transform="translate(18, 100)">
+      <rect width="104" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="52" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Spring Boot</text>
+      <rect x="112" width="76" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="150" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">Kafka</text>
+      <rect x="196" width="100" height="24" rx="6" fill="#F8FAFC" stroke="#E2E8F0" /><text x="246" y="16" font-family="Pretendard" font-size="11" font-weight="600" fill="#334155" text-anchor="middle">OpenTelemetry</text>
+    </g>
+    <text x="18" y="146" font-family="Pretendard" font-size="10.5" font-weight="600" fill="#0D9488">⚡ 10k+ Concurrency &amp; 94%+ Redis Hit Ratio under Traffic Spikes</text>
+  </g>
+</svg>

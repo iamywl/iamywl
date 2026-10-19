@@ -1,154 +1,77 @@
-<svg width="850" height="300" viewBox="0 0 850 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="850" height="260" viewBox="0 0 850 260" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Background Canvas Gradient -->
-    <linearGradient id="brightHeroBg" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="heroBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="100%" stop-color="#F8FAFC" />
-    </linearGradient>
-
-    <!-- Apple Specular Bevel Rim (135°) -->
-    <linearGradient id="brightHeroBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="25%" stop-color="#E2E8F0" />
-      <stop offset="70%" stop-color="#CBD5E1" />
-      <stop offset="100%" stop-color="#94A3B8" />
-    </linearGradient>
-
-    <!-- Ambient Glow: Toss Blue Refraction -->
-    <radialGradient id="tossHeroAmbient" cx="50%" cy="0%" r="75%">
-      <stop offset="0%" stop-color="#3182F6" stop-opacity="0.08" />
-      <stop offset="50%" stop-color="#1B64DA" stop-opacity="0.02" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
-    </radialGradient>
-
-    <!-- Ambient Glow: Apple Emerald -->
-    <radialGradient id="emeraldHeroAmbient" cx="85%" cy="30%" r="60%">
-      <stop offset="0%" stop-color="#10B981" stop-opacity="0.06" />
-      <stop offset="60%" stop-color="#10B981" stop-opacity="0.01" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
-    </radialGradient>
-
-    <!-- Telemetry Chip Gradient -->
-    <linearGradient id="heroChipBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="60%" stop-color="#F8FAFC" />
       <stop offset="100%" stop-color="#F1F5F9" />
     </linearGradient>
-
-    <!-- Sheen Gradient -->
-    <linearGradient id="heroSheenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.75" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3182F6" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#3182F6" stop-opacity="0.04" />
     </linearGradient>
-
-    <!-- Clip Path for Sheen Sweep -->
-    <clipPath id="heroClip">
-      <rect x="1" y="1" width="848" height="298" rx="24" />
-    </clipPath>
-
     <style>
-      @keyframes heroSheenSweep {
-        0% { transform: translateX(-150%) skewX(-20deg); opacity: 0; }
-        20% { opacity: 0.8; }
-        55% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
-        100% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+      @keyframes wavePulse {
+        0%, 100% { opacity: 0.85; transform: scaleY(1); }
+        50% { opacity: 1; transform: scaleY(1.04); }
       }
-
-      @keyframes heroBeaconPulse {
-        0% { r: 4px; opacity: 0.95; }
-        60% { r: 11px; opacity: 0.15; }
-        100% { r: 14px; opacity: 0; }
+      @keyframes beaconBlink {
+        0%, 100% { opacity: 1; r: 4px; }
+        50% { opacity: 0.3; r: 6.5px; }
       }
-
-      @keyframes heroCorePulse {
-        0%, 100% { transform: scale(1); opacity: 1; }
-        50% { transform: scale(1.15); opacity: 0.85; }
-      }
-
-      .hero-specular-sheen {
-        animation: heroSheenSweep 7.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-      }
-
-      .hero-beacon-wave {
-        animation: heroBeaconPulse 2.2s ease-out infinite;
-        transform-origin: 215px 38px;
-      }
-
-      .hero-beacon-core {
-        animation: heroCorePulse 2.2s ease-in-out infinite;
-        transform-origin: 215px 38px;
-      }
+      .wave-path { animation: wavePulse 6s ease-in-out infinite; transform-origin: bottom; }
+      .live-beacon { animation: beaconBlink 2.2s ease-in-out infinite; }
     </style>
   </defs>
 
-  <!-- Base White Ceramic Unibody with 24px Radius -->
-  <rect x="1" y="1" width="848" height="298" rx="24" fill="url(#brightHeroBg)" stroke="url(#brightHeroBorder)" stroke-width="1.2" />
-  <rect x="1" y="1" width="848" height="298" rx="24" fill="url(#tossHeroAmbient)" />
-  <rect x="1" y="1" width="848" height="298" rx="24" fill="url(#emeraldHeroAmbient)" />
+  <rect x="2" y="2" width="846" height="256" rx="22" fill="url(#heroBg)" stroke="#E2E8F0" stroke-width="1.2" />
+  <path class="wave-path" d="M2 170 C 220 130, 480 210, 848 160 L 848 256 C 848 268, 836 256, 824 256 L 26 256 C 14 256, 2 244, 2 232 Z" fill="url(#blueGlow)" />
 
-  <!-- Animated Specular Sheen Overlay -->
-  <g clip-path="url(#heroClip)">
-    <rect class="hero-specular-sheen" x="0" y="0" width="220" height="300" fill="url(#heroSheenGrad)" />
-  </g>
-
-  <!-- Live Status Capsule (y: 38) -->
-  <g transform="translate(425, 38)" text-anchor="middle">
-    <!-- Capsule Glass Pill -->
-    <rect x="-225" y="-14" width="450" height="28" rx="14" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1" />
-    
-    <!-- Pulsing Emerald Beacon -->
-    <circle class="hero-beacon-wave" cx="-195" cy="0" r="4" fill="#10B981" />
-    <circle class="hero-beacon-core" cx="-195" cy="0" r="4" fill="#059669" />
-    
-    <text x="8" y="4.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="10" font-weight="700" letter-spacing="0.14em" fill="#15803D">
-      INFRASTRUCTURE &amp; SECURITY ARCHITECT | SRE &amp; PLATFORM
+  <!-- Top Status Capsule -->
+  <g transform="translate(425, 36)" text-anchor="middle">
+    <rect x="-210" y="-13" width="420" height="26" rx="13" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+    <circle class="live-beacon" cx="-185" cy="0" r="4" fill="#2563EB" />
+    <circle cx="-185" cy="0" r="2.5" fill="#2563EB" />
+    <text x="8" y="4" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', 'SF Pro Text', sans-serif" font-size="11" font-weight="700" letter-spacing="0.08em" fill="#1D4ED8">
+      INFRASTRUCTURE &amp; SECURITY ARCHITECT · SRE &amp; CLOUD NATIVE
     </text>
   </g>
 
-  <!-- Confident Identity: @iamywl (y: 112) -->
-  <g transform="translate(425, 112)" text-anchor="middle">
-    <text font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="46" font-weight="800" letter-spacing="-0.035em" fill="#0F172A">
-      @iamywl
+  <!-- Headline -->
+  <g transform="translate(425, 102)" text-anchor="middle">
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', 'SF Pro Display', sans-serif" font-size="34" font-weight="800" letter-spacing="-0.03em" fill="#0F172A">
+      안녕하세요 👋 <tspan fill="#3182F6">@iamywl</tspan>입니다.
     </text>
   </g>
 
-  <!-- Conversational Mission Subtitles (y: 152, 176) -->
-  <g transform="translate(425, 152)" text-anchor="middle">
-    <text font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', 'SF Pro Text', sans-serif" font-size="15" font-weight="600" letter-spacing="-0.02em" fill="#1E293B">
-      시스템 최하단 리눅스 커널부터 대규모 멀티 클러스터 쿠버네티스까지
+  <!-- Mission Statement -->
+  <g transform="translate(425, 142)" text-anchor="middle">
+    <text font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', 'SF Pro Text', sans-serif" font-size="14.5" font-weight="500" letter-spacing="-0.015em" fill="#334155">
+      시스템 최하단 <tspan font-weight="700" fill="#0F172A">리눅스 커널(eBPF)</tspan>부터 대규모 <tspan font-weight="700" fill="#0F172A">멀티 클러스터 쿠버네티스</tspan>까지 설계하고 운영합니다.
     </text>
-    <text y="24" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="13" font-weight="400" letter-spacing="-0.01em" fill="#64748B">
-      Linux Kernel Tracing (eBPF) · Cloud Native K8s (Tart VM) · Zero-Trust DevSecOps
+    <text y="22" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="12.5" font-weight="400" fill="#64748B">
+      Linux Kernel Introspection · Apple Silicon Native K8s (Tart VM) · Zero-Trust DevSecOps GitOps
     </text>
   </g>
 
-  <!-- Hard Telemetry Pill Strip (y: 232) -->
-  <g transform="translate(425, 232)" text-anchor="middle">
-    <!-- Chip 1: eBPF Hook Latency -->
+  <!-- Telemetry Strip -->
+  <g transform="translate(425, 216)" text-anchor="middle">
     <g transform="translate(-270, 0)">
-      <rect x="-124" y="-17" width="248" height="34" rx="17" fill="url(#heroChipBg)" stroke="#E2E8F0" stroke-width="1" />
-      <text y="5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11.5" font-weight="600" fill="#334155" text-anchor="middle">
+      <rect x="-124" y="-15" width="248" height="30" rx="15" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text y="4.5" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="600" fill="#334155">
         ⚡ <tspan fill="#2563EB" font-weight="700">&lt; 1.2μs</tspan> eBPF Hook Latency
       </text>
     </g>
-
-    <!-- Chip 2: 4-Node Tart VM K8s -->
     <g transform="translate(0, 0)">
-      <rect x="-132" y="-17" width="264" height="34" rx="17" fill="url(#heroChipBg)" stroke="#E2E8F0" stroke-width="1" />
-      <text y="5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11.5" font-weight="600" fill="#334155" text-anchor="middle">
-        ☁️ 4-Node Tart VM K8s (<tspan fill="#059669" font-weight="700">99.9% SLA</tspan>)
+      <rect x="-130" y="-15" width="260" height="30" rx="15" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text y="4.5" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="600" fill="#334155">
+        ☁️ 4-Node Tart VM K8s (<tspan fill="#059669" font-weight="700">99.9% Uptime</tspan>)
       </text>
     </g>
-
-    <!-- Chip 3: Automated DevSecOps Gating -->
     <g transform="translate(270, 0)">
-      <rect x="-124" y="-17" width="248" height="34" rx="17" fill="url(#heroChipBg)" stroke="#E2E8F0" stroke-width="1" />
-      <text y="5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11.5" font-weight="600" fill="#334155" text-anchor="middle">
-        🔒 <tspan fill="#2563EB" font-weight="700">100% Gated</tspan> DevSecOps CVEs
+      <rect x="-124" y="-15" width="248" height="30" rx="15" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1" />
+      <text y="4.5" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="600" fill="#334155">
+        🔒 <tspan fill="#4338CA" font-weight="700">100% Gated</tspan> Trivy CVE Blocking
       </text>
     </g>
   </g>
-
-  <!-- Bottom Frosted Ambient Accent Line -->
-  <line x1="120" y1="282" x2="730" y2="282" stroke="#E2E8F0" stroke-width="1" />
 </svg>

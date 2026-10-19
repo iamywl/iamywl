@@ -40,7 +40,7 @@
 
 ```css
 :root {
-  /* Surface & Background (Clean White & Ceramic) */
+  /* [Light Mode] Surface & Background (Toss Clean White & Ceramic) */
   --surface-base: #FFFFFF;
   --surface-card: #FFFFFF;
   --surface-subtle: #F8FAFC;
@@ -66,6 +66,37 @@
   --border-focus: #BFDBFE;
   --shadow-soft: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
   --shadow-card: 0 8px 30px -4px rgba(15, 23, 42, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* [Dark Mode] Surface & Background (Apple Space Gray & GitHub Canvas) */
+    --surface-base: #0D1117;
+    --surface-card: #161B22;
+    --surface-subtle: #0D1117;
+    --surface-badge: #1F2937;
+
+    /* Typography (High Contrast Clean White & Silver) */
+    --text-headline: #F0F6FC; /* Clean White */
+    --text-body: #C9D1D9;     /* Light Gray */
+    --text-muted: #8B949E;    /* Silver Metadata */
+
+    /* Primary Brand Accent */
+    --accent-primary: #58A6FF; /* High Contrast Toss Blue */
+    --accent-hover: #79B8FF;
+    --accent-light: #1F2937;
+
+    /* Status Accents */
+    --status-active: #3FB950;  /* Subtle Green */
+    --status-active-bg: #142D1E;
+    --status-metric: #58A6FF;
+
+    /* Borders & Shadows */
+    --border-delicate: #30363D; /* 1px GitHub Dark Hairline */
+    --border-focus: #388BFD;
+    --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.5);
+    --shadow-card: 0 8px 30px -4px rgba(0, 0, 0, 0.6);
+  }
 }
 ```
 

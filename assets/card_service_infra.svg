@@ -1,25 +1,12 @@
 <svg width="415" height="240" viewBox="0 0 415 240" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Soft White Ceramic Gradient -->
     <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFFFFF" />
       <stop offset="100%" stop-color="#F8FAFC" />
     </linearGradient>
-
-    <!-- Hairline Border -->
-    <linearGradient id="cardBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="40%" stop-color="#E2E8F0" />
-      <stop offset="100%" stop-color="#CBD5E1" />
-    </linearGradient>
-
-    <filter id="cardShadow" x="-3%" y="-3%" width="106%" height="110%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="6" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.04" />
-    </filter>
   </defs>
 
-  <!-- Card Body -->
-  <rect x="2" y="2" width="411" height="236" rx="18" fill="url(#cardBg)" stroke="url(#cardBorder)" stroke-width="1.2" filter="url(#cardShadow)" />
+  <rect x="2" y="2" width="411" height="236" rx="18" fill="url(#cardBg)" stroke="#E2E8F0" stroke-width="1.2" />
 
   <!-- Top Badge -->
   <g transform="translate(20, 18)">
@@ -40,12 +27,12 @@
     service_infra
   </text>
 
-  <!-- Domain Subtitle (Toss Blue) -->
+  <!-- Domain Subtitle -->
   <text x="20" y="94" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="12" font-weight="600" fill="#2563EB">
     Tart VM Multi-Cluster Kubernetes Infrastructure
   </text>
 
-  <!-- Bullet Points (Slate) -->
+  <!-- Bullet Points -->
   <text x="20" y="116" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11.5" font-weight="400" fill="#334155">
     • Apple Virtualization native 4-node K8s cluster (1 CP + 3 Workers)
   </text>
@@ -53,10 +40,12 @@
     • MetalLB L2 load-balancer + Cilium eBPF CNI + ArgoCD GitOps
   </text>
 
-  <!-- Clean Telemetry Box -->
+  <!-- Telemetry Box -->
   <g transform="translate(20, 148)">
     <rect width="375" height="30" rx="8" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1" />
-    <text x="14" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="600" fill="#334155">📊 TOPOLOGY: <tspan fill="#2563EB" font-weight="700">4-Node K8s</tspan> &#160;&#160;|&#160;&#160; 🟢 UPTIME: <tspan fill="#059669" font-weight="700">99.9% (0-Downtime)</tspan></text>
+    <text x="14" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="600" fill="#334155">
+      📊 TOPOLOGY: <tspan font-weight="700" fill="#2563EB">4-Node K8s</tspan> &#160;&#160;|&#160;&#160; 🟢 UPTIME: <tspan font-weight="700" fill="#059669">99.9% (0-Downtime)</tspan>
+    </text>
   </g>
 
   <!-- Tech Stack Pills -->

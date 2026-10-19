@@ -1,13 +1,21 @@
 <div align="center">
 
-<!-- Clean Toss White & Apple Minimalist Hero Banner -->
-<img src="./assets/hero_banner.svg" width="100%" alt="@iamywl - Infrastructure &amp; Security Architect" />
+<!-- Dual-Theme: Toss White & Apple Dark Mode Hero Banner -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero_banner_dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/hero_banner_light.svg">
+  <img src="./assets/hero_banner_light.svg" width="100%" alt="@iamywl - Infrastructure &amp; Security Architect" />
+</picture>
 
 <br/><br/>
 
-<!-- Clean White Liquid Glass Quick Connect Dock -->
+<!-- Dual-Theme: Quick Connect Dock -->
 <a href="https://iamywl.github.io">
-  <img src="./assets/quick_connect.svg" width="100%" alt="Quick Connect &amp; Portfolio" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/quick_connect_dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/quick_connect_light.svg">
+    <img src="./assets/quick_connect_light.svg" width="100%" alt="Quick Connect &amp; Portfolio" />
+  </picture>
 </a>
 
 </div>
@@ -29,30 +37,57 @@
 
 ### 🚀 Flagship Production &amp; Research Showcases
 
+<!-- Row 1: ebpf_NSR & service_infra -->
 <p align="center">
   <a href="https://github.com/iamywl/ebpf_NSR">
-    <img src="./assets/card_ebpf_nsr.svg" width="49%" alt="ebpf_NSR - Kernel Attack Detection System via eBPF &amp; ML" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/card_ebpf_nsr_dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/card_ebpf_nsr_light.svg">
+      <img src="./assets/card_ebpf_nsr_light.svg" width="49%" alt="ebpf_NSR - Kernel Attack Detection System via eBPF &amp; ML" />
+    </picture>
   </a>
   <a href="https://github.com/iamywl/service_infra">
-    <img src="./assets/card_service_infra.svg" width="49%" alt="service_infra - Tart VM Multi-Cluster K8s" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/card_service_infra_dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/card_service_infra_light.svg">
+      <img src="./assets/card_service_infra_light.svg" width="49%" alt="service_infra - Tart VM Multi-Cluster K8s" />
+    </picture>
   </a>
 </p>
 
+<!-- Row 2: IaC_apple_sillicon & devsecops -->
 <p align="center">
   <a href="https://github.com/iamywl/IaC_apple_sillicon">
-    <img src="./assets/card_iac_apple_silicon.svg" width="49%" alt="IaC_apple_sillicon - Apple Silicon Native Multi-Cluster K8s IaC" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/card_iac_apple_silicon_dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/card_iac_apple_silicon_light.svg">
+      <img src="./assets/card_iac_apple_silicon_light.svg" width="49%" alt="IaC_apple_sillicon - Apple Silicon Native Multi-Cluster K8s IaC" />
+    </picture>
   </a>
   <a href="https://github.com/iamywl/devsecops">
-    <img src="./assets/card_devsecops.svg" width="49%" alt="devsecops - Enterprise DevSecOps 4-Cluster Platform" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/card_devsecops_dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/card_devsecops_light.svg">
+      <img src="./assets/card_devsecops_light.svg" width="49%" alt="devsecops - Enterprise DevSecOps 4-Cluster Platform" />
+    </picture>
   </a>
 </p>
 
+<!-- Row 3: Middleware_Hello & ROMA -->
 <p align="center">
   <a href="https://github.com/iamywl/Middleware_Hello">
-    <img src="./assets/card_middleware_hello.svg" width="49%" alt="Middleware_Hello - High-Concurrency Linux WAS" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/card_middleware_hello_dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/card_middleware_hello_light.svg">
+      <img src="./assets/card_middleware_hello_light.svg" width="49%" alt="Middleware_Hello - High-Concurrency Linux WAS" />
+    </picture>
   </a>
   <a href="https://github.com/iamywl/ROMA">
-    <img src="./assets/card_roma.svg" width="49%" alt="ROMA - High-Scale Cloud Microservice Backend" />
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="./assets/card_roma_dark.svg">
+      <source media="(prefers-color-scheme: light)" srcset="./assets/card_roma_light.svg">
+      <img src="./assets/card_roma_light.svg" width="49%" alt="ROMA - High-Scale Cloud Microservice Backend" />
+    </picture>
   </a>
 </p>
 
@@ -61,7 +96,11 @@
 ### 🛠️ Technical Arsenal (Bento Architecture)
 
 <p align="center">
-  <img src="./assets/bento_tech_matrix.svg" width="100%" alt="Technical Arsenal Bento Grid" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/bento_tech_matrix_dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/bento_tech_matrix_light.svg">
+    <img src="./assets/bento_tech_matrix_light.svg" width="100%" alt="Technical Arsenal Bento Grid" />
+  </picture>
 </p>
 
 <br/>
@@ -69,11 +108,19 @@
 ### 📊 Production Telemetry &amp; Activity Radar
 
 <p align="center">
-  <img src="./assets/system_telemetry.svg" width="100%" alt="System Telemetry &amp; Production Metrics" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/system_telemetry_dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/system_telemetry_light.svg">
+    <img src="./assets/system_telemetry_light.svg" width="100%" alt="System Telemetry &amp; Production Metrics" />
+  </picture>
 </p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/iamywl/iamywl/output/github-contribution-grid-snake-dark.svg" width="100%" alt="GitHub Contribution Grid Snake" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/iamywl/iamywl/output/github-contribution-grid-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/iamywl/iamywl/output/github-contribution-grid-snake.svg">
+    <img src="https://raw.githubusercontent.com/iamywl/iamywl/output/github-contribution-grid-snake.svg" width="100%" alt="GitHub Contribution Grid Snake" />
+  </picture>
 </p>
 
 <br/>
@@ -186,7 +233,11 @@
 
 <div align="center">
 
-<!-- Clean Minimalist Footer -->
-<img src="./assets/apple_footer.svg" width="100%" alt="Designed for @iamywl" />
+<!-- Dual-Theme Footer -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/apple_footer_dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/apple_footer_light.svg">
+  <img src="./assets/apple_footer_light.svg" width="100%" alt="Designed for @iamywl" />
+</picture>
 
 </div>
