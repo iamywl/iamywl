@@ -1,6 +1,6 @@
 <div align="center">
 
-<!-- Dual-Theme: Toss White & Apple Dark Mode Hero Banner -->
+<!-- Dual-Theme: Hero Banner -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/hero_banner_dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/hero_banner_light.svg">
@@ -9,7 +9,18 @@
 
 <br/><br/>
 
-<!-- Dual-Theme: Quick Connect Dock -->
+<!-- Modern Flat-Square Badges -->
+<p align="center">
+  <a href="https://iamywl.github.io"><img src="https://img.shields.io/badge/Live_Portfolio-iamywl.github.io-10B981?style=flat-square&logo=googlechrome&logoColor=white" alt="Live Portfolio" /></a>
+  <img src="https://img.shields.io/badge/Kernel-Linux_6.x-09090B?style=flat-square&logo=linux&logoColor=white" alt="Linux 6.x" />
+  <img src="https://img.shields.io/badge/eBPF-libbpf_%2F_BCC-10B981?style=flat-square&logo=ebpf&logoColor=white" alt="eBPF" />
+  <img src="https://img.shields.io/badge/K8s-Multi--Cluster-06B6D4?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes" />
+  <img src="https://img.shields.io/badge/IaC-Terraform-8B5CF6?style=flat-square&logo=terraform&logoColor=white" alt="Terraform" />
+  <img src="https://img.shields.io/badge/GitOps-ArgoCD-F59E0B?style=flat-square&logo=argo&logoColor=white" alt="ArgoCD" />
+  <img src="https://img.shields.io/badge/SecOps-Trivy_%26_Falco-EF4444?style=flat-square&logo=security&logoColor=white" alt="SecOps" />
+</p>
+
+<!-- Quick Connect Dock -->
 <a href="https://iamywl.github.io">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/quick_connect_dark.svg">
@@ -32,6 +43,16 @@
 | **Cloud Native &amp; K8s** | `Kubernetes (Multi-Cluster)` · `Tart VM (Apple Silicon)` · `ArgoCD GitOps` · `Cilium CNI` · `MetalLB` |
 | **SecOps &amp; IaC** | `Terraform` · `Ansible` · `Trivy CVE Gating` · `Falco Runtime` · `Kyverno` · `HashiCorp Vault` |
 | **Production Metrics** | **&lt; 1.2μs** hook latency · **100k+ SYN/s** mitigated · **99.9%** K8s SLA · **10,000+** conn |
+
+<br/>
+
+### 🚀 Top Featured Repositories
+
+| Repository | Architectural Focus | Key Verified Metric | Primary Stack |
+| :--- | :--- | :--- | :--- |
+| [**`ebpf_NSR`**](https://github.com/iamywl/ebpf_NSR) | Kernel attack detection &amp; ML runtime defense | **&lt; 1.2μs** latency · **100k+ SYN/s** | `eBPF` `C/C++` `Python ML` |
+| [**`service_infra`**](https://github.com/iamywl/service_infra) | Tart VM 4-Node Multi-Cluster K8s | **99.9%** Uptime SLA · Zero Downtime | `Tart VM` `K8s` `ArgoCD` `Cilium` |
+| [**`IaC_apple_sillicon`**](https://github.com/iamywl/IaC_apple_sillicon) | Apple Silicon Native K8s IaC automation | **&lt; 42s** Cluster Ready · 0% Drift | `Terraform` `Ansible` `ARM64` |
 
 <br/>
 
@@ -117,7 +138,12 @@
 
 <br/>
 
-### 📊 Production Telemetry &amp; Activity Radar
+### 📊 Production Telemetry &amp; Transparent GitHub Stats
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=iamywl&show_icons=true&theme=transparent&bg_color=00000000&hide_border=true&title_color=10B981&text_color=94A3B8&icon_color=10B981" alt="GitHub Stats" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=iamywl&theme=transparent&background=00000000&hide_border=true&ring=10B981&fire=10B981&currStreakNum=10B981&sideNums=94A3B8&currStreakLabel=94A3B8&sideLabels=94A3B8" alt="GitHub Streak" />
+</p>
 
 <p align="center">
   <picture>
