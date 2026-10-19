@@ -1,19 +1,48 @@
 <svg width="850" height="90" viewBox="0 0 850 90" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="footerBorder" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Border Gradient -->
+    <linearGradient id="footerLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#1E293B" stop-opacity="0" />
-      <stop offset="30%" stop-color="#3182F6" stop-opacity="0.4" />
-      <stop offset="70%" stop-color="#3182F6" stop-opacity="0.4" />
+      <stop offset="25%" stop-color="#3182F6" stop-opacity="0.35" />
+      <stop offset="50%" stop-color="#06B6D4" stop-opacity="0.5" />
+      <stop offset="75%" stop-color="#3182F6" stop-opacity="0.35" />
       <stop offset="100%" stop-color="#1E293B" stop-opacity="0" />
     </linearGradient>
+
+    <!-- Glass Capsule Gradient -->
+    <linearGradient id="footerPillBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#080C14" stop-opacity="0.6" />
+    </linearGradient>
+
+    <linearGradient id="footerPillBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.2" />
+      <stop offset="50%" stop-color="#3182F6" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.04" />
+    </linearGradient>
+
+    <style>
+      @keyframes footerGlow {
+        0%, 100% { opacity: 0.6; filter: drop-shadow(0 0 2px rgba(49, 130, 246, 0.3)); }
+        50% { opacity: 1; filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.6)); }
+      }
+      .footer-glowing-line {
+        animation: footerGlow 4s ease-in-out infinite;
+      }
+    </style>
   </defs>
-  <line x1="120" y1="15" x2="730" y2="15" stroke="url(#footerBorder)" stroke-width="1.2" />
+
+  <!-- Ambient Glowing Separator Line -->
+  <line class="footer-glowing-line" x1="80" y1="12" x2="770" y2="12" stroke="url(#footerLineGrad)" stroke-width="1.2" />
+
+  <!-- Center Capsule -->
   <g transform="translate(425, 48)" text-anchor="middle">
-    <text font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', 'SF Pro Text', sans-serif" font-size="12" font-weight="500" fill="#8B95A1" letter-spacing="0.04em">
-       Designed with Apple Precision &amp; Toss Simplicity · @iamywl
+    <rect x="-260" y="-22" width="520" height="44" rx="22" fill="url(#footerPillBg)" stroke="url(#footerPillBorder)" stroke-width="0.8" />
+    <text y="-2" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="11.5" font-weight="600" fill="#CBD5E1" letter-spacing="0.03em">
+       visionOS Spatial Glassmorphism × Toss TDS · <tspan fill="#38BDF8" font-weight="700">@iamywl</tspan>
     </text>
-    <text y="20" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="400" fill="#475569" letter-spacing="0.02em">
-      Mission-Critical Cloud Native &amp; Systems Architecture · © 2026 iamywl
+    <text y="15" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="9.5" font-weight="400" fill="#64748B" letter-spacing="0.02em">
+      Production Telemetry · Verified Benchmarks · 100% Anonymized Engineering Profile · © 2026
     </text>
   </g>
 </svg>

@@ -1,90 +1,151 @@
-<svg width="415" height="230" viewBox="0 0 415 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="415" height="240" viewBox="0 0 415 240" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <!-- Background Gradient -->
-    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0B0F17" />
-      <stop offset="60%" stop-color="#070A0F" />
-      <stop offset="100%" stop-color="#04060A" />
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#180D1E" />
+      <stop offset="55%" stop-color="#0F0814" />
+      <stop offset="100%" stop-color="#060308" />
     </linearGradient>
 
-    <!-- Ambient Glow: Emerald Neon -->
-    <radialGradient id="cardGlow" cx="90%" cy="10%" r="60%">
-      <stop offset="0%" stop-color="#30D158" stop-opacity="0.18" />
-      <stop offset="60%" stop-color="#30D158" stop-opacity="0.03" />
+    <!-- visionOS Specular Rim Gradient (135°) -->
+    <linearGradient id="borderGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.35" />
+      <stop offset="30%" stop-color="#EC4899" stop-opacity="0.30" />
+      <stop offset="70%" stop-color="#8B5CF6" stop-opacity="0.18" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.05" />
+    </linearGradient>
+
+    <!-- Ambient Glow: Rose / Violet Accent -->
+    <radialGradient id="cardGlow4" cx="88%" cy="12%" r="65%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#8B5CF6" stop-opacity="0.04" />
       <stop offset="100%" stop-color="#000000" stop-opacity="0" />
     </radialGradient>
 
-    <!-- Delicate Border Gradient -->
-    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.16" />
-      <stop offset="50%" stop-color="#30D158" stop-opacity="0.3" />
-      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.04" />
+    <!-- Telemetry Box Background -->
+    <linearGradient id="telemBg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#EC4899" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0.04" />
     </linearGradient>
 
-    <!-- Pill Gradient -->
-    <linearGradient id="pillBg" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.6" />
-      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.6" />
+    <linearGradient id="telemBorder4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F472B6" stop-opacity="0.45" />
+      <stop offset="100%" stop-color="#EC4899" stop-opacity="0.20" />
     </linearGradient>
+
+    <!-- Stack Pill Background -->
+    <linearGradient id="pillBg4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.75" />
+    </linearGradient>
+
+    <!-- Sheen Gradient -->
+    <linearGradient id="sheen4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.15" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+
+    <clipPath id="cardClip4">
+      <rect x="1" y="1" width="413" height="238" rx="20" />
+    </clipPath>
+
+    <style>
+      @keyframes cardSheen4 {
+        0% { transform: translateX(-150%) skewX(-20deg); opacity: 0; }
+        25% { opacity: 0.6; }
+        60% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+        100% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+      }
+      @keyframes telemPulse4 {
+        0%, 100% { filter: drop-shadow(0 0 2px rgba(244, 114, 182, 0.25)); }
+        50% { filter: drop-shadow(0 0 7px rgba(236, 72, 153, 0.55)); }
+      }
+      .card-sheen-sweep4 {
+        animation: cardSheen4 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      .telem-box4 {
+        animation: telemPulse4 3.5s ease-in-out infinite;
+      }
+    </style>
   </defs>
 
-  <!-- Card Base with Soft 20px TDS Radius -->
-  <rect x="1" y="1" width="413" height="228" rx="20" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="1.2" />
-  <rect x="1" y="1" width="413" height="228" rx="20" fill="url(#cardGlow)" />
+  <!-- Unibody Card Canvas -->
+  <rect x="1" y="1" width="413" height="238" rx="20" fill="url(#bgGrad4)" stroke="url(#borderGrad4)" stroke-width="1.2" />
+  <rect x="1" y="1" width="413" height="238" rx="20" fill="url(#cardGlow4)" />
 
-  <!-- Top Domain Pill & Action Icon -->
-  <g transform="translate(24, 24)">
-    <rect width="188" height="22" rx="11" fill="#30D158" fill-opacity="0.12" stroke="#30D158" stroke-opacity="0.3" stroke-width="0.8" />
-    <text x="94" y="15" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.1em" fill="#30D158" text-anchor="middle">
-      🔒 DEVSECOPS HOMELAB
+  <!-- Sheen Sweep -->
+  <g clip-path="url(#cardClip4)">
+    <rect class="card-sheen-sweep4" x="0" y="0" width="120" height="240" fill="url(#sheen4)" />
+  </g>
+
+  <!-- Top Domain Pill -->
+  <g transform="translate(20, 20)">
+    <rect width="170" height="22" rx="11" fill="#EC4899" fill-opacity="0.15" stroke="#EC4899" stroke-opacity="0.4" stroke-width="0.8" />
+    <text x="85" y="15" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.08em" fill="#F472B6" text-anchor="middle">
+      🔒 ZERO-TRUST GITOPS
     </text>
   </g>
 
-  <!-- Repository Action Arrow -->
-  <g transform="translate(372, 28)">
-    <circle cx="10" cy="10" r="14" fill="#FFFFFF" fill-opacity="0.05" stroke="#FFFFFF" stroke-opacity="0.1" stroke-width="0.8" />
-    <path d="M7 13L13 7M13 7H8.5M13 7V11.5" stroke="#8B95A1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+  <!-- Repository Action Arrow Link -->
+  <g transform="translate(367, 18)">
+    <circle cx="14" cy="14" r="14" fill="#FFFFFF" fill-opacity="0.06" stroke="#FFFFFF" stroke-opacity="0.18" stroke-width="0.8" />
+    <path d="M10 18L18 10M18 10H12M18 10V16" stroke="#94A3B8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
   </g>
 
-  <!-- Title: Project Name -->
-  <text x="24" y="82" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="21" font-weight="800" letter-spacing="-0.02em" fill="#FFFFFF">
+  <!-- Title: devsecops -->
+  <text x="20" y="74" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="20" font-weight="800" letter-spacing="-0.02em" fill="#FFFFFF">
     devsecops
   </text>
 
-  <!-- English Description -->
-  <text x="24" y="108" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="12.5" font-weight="600" letter-spacing="-0.01em" fill="#4ADE80">
-    Enterprise DevSecOps Homelab Platform
+  <!-- Subtitle -->
+  <text x="20" y="96" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="12" font-weight="600" letter-spacing="-0.01em" fill="#F472B6">
+    4-Cluster Homelab &amp; GitOps Security Platform
   </text>
 
-  <!-- Korean Highlights -->
-  <text x="24" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="12" font-weight="400" letter-spacing="-0.01em" fill="#8B95A1">
-    Apple Silicon + Tart 기반 4-클러스터 K8s 보안 자동화 플랫폼
+  <!-- Architecture Highlights -->
+  <text x="20" y="118" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#94A3B8">
+    • Dev / Staging / Prod / Ops strict segregated topology
   </text>
-  <text x="24" y="150" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="12" font-weight="400" letter-spacing="-0.01em" fill="#8B95A1">
-    CI/CD 파이프라인 무중단 배포 및 엔터프라이즈 보안 규정 준수
+  <text x="20" y="134" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Pretendard', sans-serif" font-size="11" font-weight="400" fill="#94A3B8">
+    • Trivy shift-left image gating &amp; Kyverno zero-root policy
   </text>
+
+  <!-- Dedicated Telemetry Glass Box -->
+  <g class="telem-box4" transform="translate(20, 148)">
+    <rect width="375" height="32" rx="8" fill="url(#telemBg4)" stroke="url(#telemBorder4)" stroke-width="1" />
+    <!-- Metric 1 -->
+    <text x="14" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#E2E8F0">
+      🔒 CVE GATING: <tspan fill="#F472B6" font-weight="800">100% Trivy Block</tspan>
+    </text>
+    <line x1="184" y1="8" x2="184" y2="24" stroke="#334155" stroke-width="1" />
+    <!-- Metric 2 -->
+    <text x="196" y="20.5" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#E2E8F0">
+      🛡️ RUNTIME: <tspan fill="#34D399" font-weight="800">Falco Kernel Defense</tspan>
+    </text>
+  </g>
 
   <!-- Bottom Tech Stack Chips -->
-  <g transform="translate(24, 184)">
+  <g transform="translate(20, 196)">
     <!-- Pill 1: DevSecOps -->
     <g transform="translate(0, 0)">
-      <rect width="82" height="24" rx="8" fill="url(#pillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="41" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#CBD5E1" text-anchor="middle">DevSecOps</text>
+      <rect width="84" height="24" rx="7" fill="url(#pillBg4)" stroke="#334155" stroke-width="0.8" />
+      <text x="42" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">DevSecOps</text>
     </g>
-    <!-- Pill 2: 4-Cluster K8s -->
-    <g transform="translate(88, 0)">
-      <rect width="90" height="24" rx="8" fill="url(#pillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="45" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#CBD5E1" text-anchor="middle">4-Cluster K8s</text>
+    <!-- Pill 2: Trivy -->
+    <g transform="translate(92, 0)">
+      <rect width="60" height="24" rx="7" fill="url(#pillBg4)" stroke="#334155" stroke-width="0.8" />
+      <text x="30" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">Trivy</text>
     </g>
-    <!-- Pill 3: Tart VM -->
-    <g transform="translate(184, 0)">
-      <rect width="70" height="24" rx="8" fill="url(#pillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="35" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#CBD5E1" text-anchor="middle">Tart VM</text>
+    <!-- Pill 3: Falco -->
+    <g transform="translate(160, 0)">
+      <rect width="60" height="24" rx="7" fill="url(#pillBg4)" stroke="#334155" stroke-width="0.8" />
+      <text x="30" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">Falco</text>
     </g>
-    <!-- Pill 4: CI/CD -->
-    <g transform="translate(260, 0)">
-      <rect width="64" height="24" rx="8" fill="url(#pillBg)" stroke="#334155" stroke-width="0.8" />
-      <text x="32" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10.5" font-weight="600" fill="#CBD5E1" text-anchor="middle">CI / CD</text>
+    <!-- Pill 4: Kyverno / Vault -->
+    <g transform="translate(228, 0)">
+      <rect width="112" height="24" rx="7" fill="url(#pillBg4)" stroke="#334155" stroke-width="0.8" />
+      <text x="56" y="16" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="600" fill="#CBD5E1" text-anchor="middle">Kyverno / Vault</text>
     </g>
   </g>
 </svg>
