@@ -1,58 +1,213 @@
-<svg width="850" height="160" viewBox="0 0 850 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="850" height="180" viewBox="0 0 850 180" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="telemShadow" x="-1%" y="-3%" width="102%" height="110%" filterUnits="userSpaceOnUse">
-      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.04" />
-    </filter>
+    <!-- Background Gradient -->
+    <linearGradient id="brightTelemBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F8FAFC" />
+    </linearGradient>
+
+    <!-- Apple Specular Rim Gradient (135°) -->
+    <linearGradient id="brightTelemBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="30%" stop-color="#E2E8F0" />
+      <stop offset="100%" stop-color="#CBD5E1" />
+    </linearGradient>
+
+    <!-- Sheen Gradient -->
+    <linearGradient id="brightTelemSheen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0" />
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.65" />
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Progress Bar Gradient -->
+    <linearGradient id="brightProgGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#60A5FA" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+
+    <clipPath id="telemClip">
+      <rect x="1" y="1" width="848" height="178" rx="20" />
+    </clipPath>
+
+    <style>
+      @keyframes throughputFlow {
+        0% { stroke-dashoffset: 120; opacity: 0.6; }
+        50% { opacity: 1; }
+        100% { stroke-dashoffset: 0; opacity: 0.6; }
+      }
+
+      @keyframes beaconPulseTelem {
+        0% { r: 4px; opacity: 0.95; }
+        60% { r: 10px; opacity: 0.15; }
+        100% { r: 13px; opacity: 0; }
+      }
+
+      @keyframes corePulseTelem {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.15); opacity: 0.85; }
+      }
+
+      @keyframes telemSheenSweep {
+        0% { transform: translateX(-150%) skewX(-20deg); opacity: 0; }
+        20% { opacity: 0.6; }
+        50% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+        100% { transform: translateX(250%) skewX(-20deg); opacity: 0; }
+      }
+
+      .throughput-line {
+        stroke-dasharray: 8 4;
+        animation: throughputFlow 3s linear infinite;
+      }
+
+      .beacon-wave-telem {
+        animation: beaconPulseTelem 2.2s ease-out infinite;
+        transform-origin: 395px 63px;
+      }
+
+      .beacon-core-telem {
+        animation: corePulseTelem 2.2s ease-in-out infinite;
+        transform-origin: 395px 63px;
+      }
+
+      .telem-sheen-line {
+        animation: telemSheenSweep 8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+    </style>
   </defs>
 
   <!-- Container Unibody -->
-  <rect x="2" y="2" width="846" height="156" rx="18" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2" filter="url(#telemShadow)" />
+  <rect x="1" y="1" width="848" height="178" rx="20" fill="url(#brightTelemBg)" stroke="url(#brightTelemBorder)" stroke-width="1.2" />
 
-  <!-- Gauge 1: Kernel Hook Latency -->
-  <g transform="translate(18, 16)">
-    <rect width="194" height="128" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
-    <text x="16" y="26" font-family="Pretendard" font-size="11" font-weight="700" fill="#64748B">KERNEL HOOK LATENCY</text>
-    <text x="16" y="58" font-family="Pretendard" font-size="26" font-weight="800" fill="#2563EB">&lt; 1.2 μs</text>
-    <!-- Mini Waveform -->
-    <path d="M16 86 Q 30 74, 45 84 T 75 80 T 105 84 T 135 76 T 178 82" fill="none" stroke="#3182F6" stroke-width="2" stroke-linecap="round" />
-    <text x="16" y="112" font-family="Pretendard" font-size="10.5" font-weight="600" fill="#059669">● Target: &lt; 5.0 μs (100% In-Budget)</text>
+  <!-- Sheen Sweep -->
+  <g clip-path="url(#telemClip)">
+    <rect class="telem-sheen-line" x="0" y="0" width="160" height="180" fill="url(#brightTelemSheen)" />
   </g>
 
-  <!-- Gauge 2: Cluster Availability SLA -->
-  <g transform="translate(224, 16)">
-    <rect width="194" height="128" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
-    <text x="16" y="26" font-family="Pretendard" font-size="11" font-weight="700" fill="#64748B">CLUSTER AVAILABILITY</text>
-    <text x="16" y="58" font-family="Pretendard" font-size="26" font-weight="800" fill="#059669">99.9% SLA</text>
-    <!-- Node Indicators -->
-    <g transform="translate(16, 76)">
-      <circle cx="10" cy="8" r="6" fill="#10B981" /><text x="24" y="12" font-family="Pretendard" font-size="10.5" font-weight="600" fill="#334155">CP-01 (Tart VM)</text>
-      <circle cx="100" cy="8" r="6" fill="#10B981" /><text x="114" y="12" font-family="Pretendard" font-size="10.5" font-weight="600" fill="#334155">Worker 1-3</text>
+  <!-- ================= GAUGE 1: KERNEL HOOK LATENCY ================= -->
+  <g transform="translate(17, 17)">
+    <rect width="195" height="146" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+    
+    <!-- Header -->
+    <text x="14" y="26" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.08em" fill="#2563EB">
+      ⚡ KERNEL HOOK LATENCY
+    </text>
+
+    <!-- Big Metric Value -->
+    <text x="14" y="66" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="25" font-weight="800" fill="#0F172A">
+      &lt; 1.2 <tspan font-size="16" font-weight="600" fill="#2563EB">μs</tspan>
+    </text>
+
+    <!-- Sub-status description -->
+    <text x="14" y="86" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="500" fill="#64748B">
+      Target &lt; 5.0μs · 100% In-Budget
+    </text>
+
+    <!-- Mini SVG Throughput Waveform -->
+    <g transform="translate(14, 104)">
+      <!-- Baseline background line -->
+      <path d="M0 16 L25 16 L40 4 L55 24 L75 10 L95 18 L120 2 L140 16 L167 16" fill="none" stroke="#E2E8F0" stroke-width="1.5" stroke-linecap="round" />
+      <!-- Animated waveform line -->
+      <path class="throughput-line" d="M0 16 L25 16 L40 4 L55 24 L75 10 L95 18 L120 2 L140 16 L167 16" fill="none" stroke="#2563EB" stroke-width="1.8" stroke-linecap="round" />
     </g>
-    <text x="16" y="112" font-family="Pretendard" font-size="10.5" font-weight="600" fill="#059669">● Zero-Downtime Rolling Rollover</text>
   </g>
 
-  <!-- Gauge 3: DevSecOps CVE Gating -->
-  <g transform="translate(430, 16)">
-    <rect width="194" height="128" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
-    <text x="16" y="26" font-family="Pretendard" font-size="11" font-weight="700" fill="#64748B">DEVSECOPS ENFORCEMENT</text>
-    <text x="16" y="58" font-family="Pretendard" font-size="26" font-weight="800" fill="#4F46E5">100% Gated</text>
-    <g transform="translate(16, 76)">
-      <rect width="76" height="18" rx="4" fill="#EEF2FF" stroke="#E0E7FF" /><text x="38" y="13" font-family="Pretendard" font-size="9.5" font-weight="700" fill="#4F46E5" text-anchor="middle">Trivy CVE</text>
-      <rect x="84" width="76" height="18" rx="4" fill="#F0FDF4" stroke="#DCFCE7" /><text x="122" y="13" font-family="Pretendard" font-size="9.5" font-weight="700" fill="#15803D" text-anchor="middle">Falco Active</text>
+  <!-- ================= GAUGE 2: CLUSTER AVAILABILITY SLA ================= -->
+  <g transform="translate(224, 17)">
+    <rect width="195" height="146" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+    
+    <!-- Header -->
+    <text x="14" y="26" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.08em" fill="#059669">
+      🟢 CLUSTER AVAILABILITY
+    </text>
+
+    <!-- Big Metric Value + Live Beacon -->
+    <g transform="translate(14, 66)">
+      <text font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="25" font-weight="800" fill="#0F172A">
+        99.9% <tspan font-size="16" font-weight="600" fill="#059669">SLA</tspan>
+      </text>
+      <!-- Pulsing Beacon -->
+      <circle class="beacon-wave-telem" cx="157" cy="-7" r="4" fill="#10B981" />
+      <circle class="beacon-core-telem" cx="157" cy="-7" r="4" fill="#059669" />
     </g>
-    <text x="16" y="112" font-family="Pretendard" font-size="10.5" font-weight="600" fill="#4F46E5">● Zero-Root Admission Policy</text>
+
+    <!-- Sub-status description -->
+    <text x="14" y="86" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="500" fill="#64748B">
+      4 Tart VM Nodes · 0-Downtime
+    </text>
+
+    <!-- Cluster Nodes Indicator Mini-Bar -->
+    <g transform="translate(14, 110)">
+      <rect x="0" y="0" width="37" height="15" rx="4" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1" />
+      <text x="18.5" y="11" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="700" fill="#15803D" text-anchor="middle">CP-1</text>
+
+      <rect x="43" y="0" width="37" height="15" rx="4" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1" />
+      <text x="61.5" y="11" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="700" fill="#15803D" text-anchor="middle">WK-1</text>
+
+      <rect x="86" y="0" width="37" height="15" rx="4" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1" />
+      <text x="104.5" y="11" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="700" fill="#15803D" text-anchor="middle">WK-2</text>
+
+      <rect x="129" y="0" width="37" height="15" rx="4" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1" />
+      <text x="147.5" y="11" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="8.5" font-weight="700" fill="#15803D" text-anchor="middle">WK-3</text>
+    </g>
   </g>
 
-  <!-- Gauge 4: Concurrency Scale -->
-  <g transform="translate(636, 16)">
-    <rect width="194" height="128" rx="12" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
-    <text x="16" y="26" font-family="Pretendard" font-size="11" font-weight="700" fill="#64748B">NETWORK CONCURRENCY</text>
-    <text x="16" y="58" font-family="Pretendard" font-size="26" font-weight="800" fill="#0F172A">10,000+ Conn</text>
-    <!-- Progress Track -->
-    <g transform="translate(16, 76)">
-      <rect width="162" height="10" rx="5" fill="#E2E8F0" />
-      <rect width="150" height="10" rx="5" fill="#3182F6" />
+  <!-- ================= GAUGE 3: DEVSECOPS POLICY ENFORCEMENT ================= -->
+  <g transform="translate(431, 17)">
+    <rect width="195" height="146" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+    
+    <!-- Header -->
+    <text x="14" y="26" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.08em" fill="#2563EB">
+      🔒 DEVSECOPS POLICY
+    </text>
+
+    <!-- Big Metric Value -->
+    <text x="14" y="66" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="25" font-weight="800" fill="#0F172A">
+      100% <tspan font-size="16" font-weight="600" fill="#2563EB">Gated</tspan>
+    </text>
+
+    <!-- Sub-status description -->
+    <text x="14" y="86" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="500" fill="#64748B">
+      Trivy CVE Block · Falco Alert
+    </text>
+
+    <!-- Mini Security Guard Pills -->
+    <g transform="translate(14, 108)">
+      <rect x="0" y="0" width="80" height="18" rx="5" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1" />
+      <text x="40" y="12.5" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="700" fill="#1D4ED8" text-anchor="middle">0 Critical CVE</text>
+
+      <rect x="86" y="0" width="80" height="18" rx="5" fill="#F0FDF4" stroke="#BBF7D0" stroke-width="1" />
+      <text x="126" y="12.5" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="9" font-weight="700" fill="#15803D" text-anchor="middle">Falco Active</text>
     </g>
-    <text x="16" y="112" font-family="Pretendard" font-size="10.5" font-weight="600" fill="#2563EB">● epoll Reactor p99 &lt; 5ms</text>
+  </g>
+
+  <!-- ================= GAUGE 4: NETWORK CONCURRENCY ================= -->
+  <g transform="translate(638, 17)">
+    <rect width="195" height="146" rx="14" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1" />
+    
+    <!-- Header -->
+    <text x="14" y="26" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Pretendard', sans-serif" font-size="9.5" font-weight="700" letter-spacing="0.08em" fill="#2563EB">
+      🚀 NETWORK CONCURRENCY
+    </text>
+
+    <!-- Big Metric Value -->
+    <text x="14" y="66" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif" font-size="25" font-weight="800" fill="#0F172A">
+      10,000+ <tspan font-size="14" font-weight="600" fill="#2563EB">Conn</tspan>
+    </text>
+
+    <!-- Sub-status description -->
+    <text x="14" y="86" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif" font-size="10" font-weight="500" fill="#64748B">
+      epoll WAS · p99 &lt; 5ms Latency
+    </text>
+
+    <!-- Gauge Progress / Throughput Bar -->
+    <g transform="translate(14, 110)">
+      <!-- Progress Track -->
+      <rect x="0" y="0" width="166" height="12" rx="6" fill="#E2E8F0" />
+      <!-- Progress Fill (92% saturation) -->
+      <rect x="0" y="0" width="152" height="12" rx="6" fill="url(#brightProgGrad)" />
+      <!-- High Throughput Tick -->
+      <circle cx="152" cy="6" r="4" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5" />
+    </g>
   </g>
 </svg>
