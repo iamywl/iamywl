@@ -13,11 +13,11 @@
 <p align="center">
   <a href="https://iamywl.github.io"><img src="https://img.shields.io/badge/Live_Portfolio-iamywl.github.io-10B981?style=flat-square&logo=googlechrome&logoColor=white" alt="Live Portfolio" /></a>
   <img src="https://img.shields.io/badge/Kernel-Linux_6.x-09090B?style=flat-square&logo=linux&logoColor=white" alt="Linux 6.x" />
-  <img src="https://img.shields.io/badge/eBPF-libbpf_%2F_BCC-10B981?style=flat-square&logo=ebpf&logoColor=white" alt="eBPF" />
+  <img src="https://img.shields.io/badge/eBPF-libbpf_%2F_BCC-10B981?style=flat-square&logo=c&logoColor=white" alt="eBPF" />
   <img src="https://img.shields.io/badge/K8s-Multi--Cluster-06B6D4?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes" />
   <img src="https://img.shields.io/badge/IaC-Terraform-8B5CF6?style=flat-square&logo=terraform&logoColor=white" alt="Terraform" />
   <img src="https://img.shields.io/badge/GitOps-ArgoCD-F59E0B?style=flat-square&logo=argo&logoColor=white" alt="ArgoCD" />
-  <img src="https://img.shields.io/badge/SecOps-Trivy_%26_Falco-EF4444?style=flat-square&logo=security&logoColor=white" alt="SecOps" />
+  <img src="https://img.shields.io/badge/SecOps-Trivy_%26_Falco-EF4444?style=flat-square&logo=snyk&logoColor=white" alt="SecOps" />
 </p>
 
 <!-- Quick Connect Dock -->
@@ -53,18 +53,9 @@
 | [**`ebpf_NSR`**](https://github.com/iamywl/ebpf_NSR) | Kernel attack detection &amp; ML runtime defense | **&lt; 1.2μs** latency · **100k+ SYN/s** | `eBPF` `C/C++` `Python ML` |
 | [**`service_infra`**](https://github.com/iamywl/service_infra) | Tart VM 4-Node Multi-Cluster K8s | **99.9%** Uptime SLA · Zero Downtime | `Tart VM` `K8s` `ArgoCD` `Cilium` |
 | [**`IaC_apple_sillicon`**](https://github.com/iamywl/IaC_apple_sillicon) | Apple Silicon Native K8s IaC automation | **&lt; 42s** Cluster Ready · 0% Drift | `Terraform` `Ansible` `ARM64` |
-
-<br/>
-
-### 🏆 Honors &amp; Engineering Awards
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./assets/card_award_google_ai_agent_dark.svg">
-    <source media="(prefers-color-scheme: light)" srcset="./assets/card_award_google_ai_agent_light.svg">
-    <img src="./assets/card_award_google_ai_agent_light.svg" width="100%" alt="Google AI Agent Challenge 2026 - 우수상 (Excellence Award)" />
-  </picture>
-</p>
+| [**`devsecops`**](https://github.com/iamywl/devsecops) | Enterprise DevSecOps 4-Cluster Platform | **100%** CVE Gating · **&lt; 500ms** Alert | `Trivy` `Falco` `Kyverno` `K8s` |
+| [**`Middleware_Hello`**](https://github.com/iamywl/Middleware_Hello) | High-Concurrency Linux WAS (epoll reactor) | **10,000+** Conns · **Sub-5ms** p99 | `epoll` `C/C++` `Zero-Copy` `Linux` |
+| [**`ROMA`**](https://github.com/iamywl/ROMA) | High-Scale Cloud Microservice Backend | **p95 &lt; 38ms** · **94%+** Cache Hit | `K8s` `HPA` `Redis` `PostgreSQL` |
 
 <br/>
 
@@ -264,33 +255,6 @@
 | **Latency SLA** | `p95 < 100ms` | **`p95 Response Time < 38ms`** | 🟢 SLA Met |
 | **Cache Hit Ratio** | `> 85%` | **`94%+ Redis Distributed Cache Hit`** | 🟢 Zero Read Spikes |
 | **Orchestration** | Microservices | **Kubernetes Multi-Service HPA** | 🟢 Auto-Scaled |
-
-</details>
-
-<details>
-<summary><b>🏆 Honors &amp; Awards: 2026 Google AI Agent Challenge · 우수상 (Excellence Award)</b></summary>
-
-> **Award Title:** 2026학년도 Google AI Agent Challenge — **우수상 (2nd Place · Excellence Award)**  
-> **Conferment Date:** 2026.06.05 · **Organizer:** 소프트웨어교육원 주관 · **Team:** 구글링 (Team Googling)
-
-- **Challenge Overview:** Autonomous AI Agent architecture design, multi-agent cooperative workflows, and production-grade task automation under strict time constraints.
-- **Architectural Contribution:**
-  - Designed an autonomous multi-agent loop pipeline combining planner, executor, and self-reflection error-recovery subagents.
-  - Implemented high-reliability tool-calling schemas and stateful context management to eliminate hallucinated execution steps.
-  - Benchmarked sub-second decision latency and deterministic task completion across complex engineering scenarios.
-
-| Telemetry Dimension | Benchmark / SLA Target | Verified Production Metric | Status |
-| :--- | :--- | :--- | :--- |
-| **Award Standing** | Top Tier Selection | **2nd Place (우수상 입상)** | 🟢 Official Award |
-| **Agent Architecture** | Multi-Agent Loop | **Self-Healing Autonomous Pipeline** | 🟢 Production Grade |
-| **Tool Calling Reliability** | Zero-Hallucination | **100% Deterministic Schema Gating** | 🟢 Verified |
-
-<br/>
-
-<div align="center">
-  <img src="./assets/certificate_google_ai_agent.jpg" width="60%" alt="2026 Google AI Agent Challenge 우수상 상장" style="border-radius: 12px; border: 1px solid #E2E8F0;" />
-  <p><i>Official Certificate of Award (우수상 · 제SEI-2026-086호 · Verified for @iamywl)</i></p>
-</div>
 
 </details>
 
