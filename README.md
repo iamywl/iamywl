@@ -179,6 +179,12 @@
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=iamywl&theme=transparent&background=00000000&hide_border=true&ring=3182F6&fire=3182F6&currStreakNum=3182F6&sideNums=64748B&currStreakLabel=3182F6&sideLabels=64748B" height="152" alt="GitHub Streak" />
 </p>
 
+<!-- GitHub Profile Summary Cards (Clean Modern Grid) -->
+<p align="center">
+  <img src="./profile-summary-card-output/github/1-repos-per-language.svg" width="49%" alt="Repos per Language" />
+  <img src="./profile-summary-card-output/github/2-most-commit-language.svg" width="49%" alt="Most Commit Language" />
+</p>
+
 <!-- Live Production Telemetry Metrics -->
 <p align="center">
   <picture>
