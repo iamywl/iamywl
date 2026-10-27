@@ -7,17 +7,25 @@
   <img src="./assets/hero_banner_light.svg" width="100%" alt="@iamywl - Infrastructure &amp; Security Architect" />
 </picture>
 
-<br/><br/>
-
-<!-- Modern Flat-Square Badges -->
+<!-- Real-time Typing Introduction (Simple & Modern) -->
 <p align="center">
-  <a href="https://iamywl.github.io"><img src="https://img.shields.io/badge/Live_Portfolio-iamywl.github.io-10B981?style=flat-square&logo=googlechrome&logoColor=white" alt="Live Portfolio" /></a>
-  <img src="https://img.shields.io/badge/Kernel-Linux_6.x-09090B?style=flat-square&logo=linux&logoColor=white" alt="Linux 6.x" />
-  <img src="https://img.shields.io/badge/eBPF-libbpf_%2F_BCC-10B981?style=flat-square&logo=c&logoColor=white" alt="eBPF" />
-  <img src="https://img.shields.io/badge/K8s-Multi--Cluster-06B6D4?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes" />
-  <img src="https://img.shields.io/badge/IaC-Terraform-8B5CF6?style=flat-square&logo=terraform&logoColor=white" alt="Terraform" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Pretendard&weight=700&size=16&duration=2800&pause=1100&color=58A6FF&center=true&vCenter=true&width=680&lines=Infrastructure+%26+Security+Architect+%40iamywl;Zero-Trust+Kernel+Tracing+via+eBPF+%26+Linux+Performance;Tart+VM+Multi-Cluster+Kubernetes+on+Apple+Silicon;Deterministic+IaC+%26+High-Concurrency+epoll+WAS">
+    <source media="(prefers-color-scheme: light)" srcset="https://readme-typing-svg.demolab.com?font=Pretendard&weight=700&size=16&duration=2800&pause=1100&color=2563EB&center=true&vCenter=true&width=680&lines=Infrastructure+%26+Security+Architect+%40iamywl;Zero-Trust+Kernel+Tracing+via+eBPF+%26+Linux+Performance;Tart+VM+Multi-Cluster+Kubernetes+on+Apple+Silicon;Deterministic+IaC+%26+High-Concurrency+epoll+WAS">
+    <img src="https://readme-typing-svg.demolab.com?font=Pretendard&weight=700&size=16&duration=2800&pause=1100&color=2563EB&center=true&vCenter=true&width=680&lines=Infrastructure+%26+Security+Architect+%40iamywl;Zero-Trust+Kernel+Tracing+via+eBPF+%26+Linux+Performance;Tart+VM+Multi-Cluster+Kubernetes+on+Apple+Silicon;Deterministic+IaC+%26+High-Concurrency+epoll+WAS" alt="Typing Intro" />
+  </picture>
+</p>
+
+<!-- Modern Flat-Square Badges (Toss & Apple Calibrated) -->
+<p align="center">
+  <a href="https://iamywl.github.io"><img src="https://img.shields.io/badge/Live_Portfolio-iamywl.github.io-3182F6?style=flat-square&logo=googlechrome&logoColor=white" alt="Live Portfolio" /></a>
+  <img src="https://img.shields.io/badge/Status-🟢_Open_for_Staff_Roles-10B981?style=flat-square" alt="Status: Open for Staff Roles" />
+  <img src="https://img.shields.io/badge/Kernel-Linux_6.x-0F172A?style=flat-square&logo=linux&logoColor=white" alt="Linux 6.x" />
+  <img src="https://img.shields.io/badge/eBPF-libbpf_%2F_BCC-2563EB?style=flat-square&logo=c&logoColor=white" alt="eBPF" />
+  <img src="https://img.shields.io/badge/K8s-Multi--Cluster-0284C7?style=flat-square&logo=kubernetes&logoColor=white" alt="Kubernetes" />
+  <img src="https://img.shields.io/badge/IaC-Terraform-6366F1?style=flat-square&logo=terraform&logoColor=white" alt="Terraform" />
   <img src="https://img.shields.io/badge/GitOps-ArgoCD-F59E0B?style=flat-square&logo=argo&logoColor=white" alt="ArgoCD" />
-  <img src="https://img.shields.io/badge/SecOps-Trivy_%26_Falco-EF4444?style=flat-square&logo=snyk&logoColor=white" alt="SecOps" />
+  <img src="https://img.shields.io/badge/SecOps-Trivy_%26_Falco-10B981?style=flat-square&logo=snyk&logoColor=white" alt="SecOps" />
 </p>
 
 <!-- Quick Connect Dock -->
@@ -28,6 +36,15 @@
     <img src="./assets/quick_connect_light.svg" width="100%" alt="Quick Connect &amp; Portfolio" />
   </picture>
 </a>
+
+<br/><br/>
+
+<!-- Simple Modern Tactile Command Deck (Refactored 3D Keycaps) -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/tactile_deck_dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/tactile_deck_light.svg">
+  <img src="./assets/tactile_deck_light.svg" width="100%" alt="Tactical Command Deck" />
+</picture>
 
 </div>
 
@@ -43,6 +60,17 @@
 | **Cloud Native &amp; K8s** | `Kubernetes (Multi-Cluster)` · `Tart VM (Apple Silicon)` · `ArgoCD GitOps` · `Cilium CNI` · `MetalLB` |
 | **SecOps &amp; IaC** | `Terraform` · `Ansible` · `Trivy CVE Gating` · `Falco Runtime` · `Kyverno` · `HashiCorp Vault` |
 | **Production Metrics** | **&lt; 1.2μs** hook latency · **100k+ SYN/s** mitigated · **99.9%** K8s SLA · **10,000+** conn |
+
+<br/>
+
+### 📐 Systems &amp; Infrastructure Architecture Matrix
+
+| Architectural Vector | Benchmark / SLA Target | Engineering Implementation &amp; Solution |
+| :--- | :--- | :--- |
+| **⚡ Sub-Microsecond Kernel Tracing** | `< 1.2μs` hook latency · Zero context switch | eBPF non-blocking ring-buffer ingestion &amp; in-kernel XDP packet filtering |
+| **🛡️ Zero-Trust Runtime Defense** | Shift-Left CVE Gating · `< 500ms` Falco alerting | Kyverno zero-root policy enforcement &amp; Trivy cryptographic provenance gates |
+| **🚀 Deterministic Multi-Cluster IaC** | `< 42s` cluster ready · 0% drift | 100% declarative Terraform lifecycle management on Apple Silicon ARM64 |
+| **🔥 High-Concurrency Async WAS** | `10,000+` concurrent conns · Sub-5ms p99 | Linux `epoll` edge-triggered reactor pattern &amp; zero-copy ring buffer allocations |
 
 <br/>
 
@@ -129,13 +157,29 @@
 
 <br/>
 
-### 📊 Production Telemetry &amp; Transparent GitHub Stats
+### 🎧 Deep Focus &amp; Ambient Engineering Frequency
 
+<!-- Simple Modern Focus Audio Player (Refactored Cosmic Audio Visualizer) -->
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=iamywl&show_icons=true&theme=transparent&bg_color=00000000&hide_border=true&title_color=10B981&text_color=94A3B8&icon_color=10B981" alt="GitHub Stats" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=iamywl&theme=transparent&background=00000000&hide_border=true&ring=10B981&fire=10B981&currStreakNum=10B981&sideNums=94A3B8&currStreakLabel=94A3B8&sideLabels=94A3B8" alt="GitHub Streak" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./assets/focus_ambient_dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./assets/focus_ambient_light.svg">
+    <img src="./assets/focus_ambient_light.svg" width="100%" alt="Deep Focus Ambient Player" />
+  </picture>
 </p>
 
+<br/>
+
+### 📊 Production Telemetry &amp; Transparent GitHub Stats
+
+<!-- GitHub Stats & Top Languages & Streak (Calibrated Monochrome & Toss Blue) -->
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=iamywl&show_icons=true&theme=transparent&bg_color=00000000&hide_border=true&title_color=3182F6&icon_color=3182F6&text_color=64748B" height="152" alt="GitHub Stats" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=iamywl&layout=compact&theme=transparent&bg_color=00000000&hide_border=true&title_color=3182F6&text_color=64748B" height="152" alt="Top Languages" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=iamywl&theme=transparent&background=00000000&hide_border=true&ring=3182F6&fire=3182F6&currStreakNum=3182F6&sideNums=64748B&currStreakLabel=3182F6&sideLabels=64748B" height="152" alt="GitHub Streak" />
+</p>
+
+<!-- Live Production Telemetry Metrics -->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/system_telemetry_dark.svg">
@@ -144,6 +188,17 @@
   </picture>
 </p>
 
+<!-- 3D Isometric Contribution Grass (Simple & Modern Dual-Theme) -->
+<h4 align="center">🌱 3D Isometric Contribution Grass</h4>
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-view.svg">
+    <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-gitblock.svg">
+    <img src="./profile-3d-contrib/profile-gitblock.svg" width="100%" alt="3D Isometric Contribution Grass" />
+  </picture>
+</p>
+
+<!-- Autonomous Contribution Snake Animation -->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/iamywl/iamywl/output/github-contribution-grid-snake-dark.svg">
@@ -151,6 +206,17 @@
     <img src="https://raw.githubusercontent.com/iamywl/iamywl/output/github-contribution-grid-snake.svg" width="100%" alt="GitHub Contribution Grid Snake" />
   </picture>
 </p>
+
+<br/>
+
+### 🛰️ Engineering Roadmap: 2026-2027 Trajectory
+
+| Phase | Milestone Track | Focus &amp; Research Scope | Target Outcome |
+| :--- | :--- | :--- | :--- |
+| **Phase 01: Core Kernel Observability** | `eBPF & Linux 6.x` | Kernel syscall tracing, non-blocking ring buffer ingestion, and XDP packet defense | `< 1.2μs` Hook Latency |
+| **Phase 02: Resilient Cloud Native** | `Tart VM Multi-Cluster` | ARM64 macOS virtualization, Cilium CNI, MetalLB L2 failover, and ArgoCD progressive canary | `99.9%` Uptime SLA |
+| **Phase 03: Shift-Left DevSecOps** | `Zero-Trust SecOps Platform` | Automated Trivy CI/CD gating, Cosign provenance signatures, and real-time Falco runtime alerts | `100%` Shift-Left Gating |
+| **Phase 04: High-Scale Systems** | `epoll Reactor & WAS Engine` | C10K concurrency mastery, zero-copy buffer pools, and sub-5ms low latency request dispatching | `10,000+` Concurrent Conns |
 
 <br/>
 
@@ -260,9 +326,34 @@
 
 <br/>
 
+### 💻 Systems Engineering Console
+
+```bash
+$ sysctl -a | grep -E "kernel.sched|net.core.somaxconn"
+kernel.sched_latency_ns = 6000000
+net.core.somaxconn = 65535
+net.ipv4.tcp_max_syn_backlog = 65535
+
+# "Simplicity is prerequisite for reliability." — Edsger W. Dijkstra
+# Architecting deterministic, observable, and resilient infrastructure.
+```
+
+<br/>
+
+### 🤖 Autonomous Agentic Framework
+
+| Agent Architecture | Target Focus | Specification Link |
+| :--- | :--- | :--- |
+| 🎨 **Design System Agent** | Toss TDS Clean White × Apple HIG Dark × Linear Precision | [`AGENTS/DESIGN_SYSTEM_AGENT.md`](./AGENTS/DESIGN_SYSTEM_AGENT.md) |
+| ⚙️ **Development Pipeline Agent** | 100% Idempotent GitHub Actions CI/CD Architecture | [`AGENTS/DEVELOPMENT_AGENT.md`](./AGENTS/DEVELOPMENT_AGENT.md) |
+| 💼 **LinkedIn Branding Agent** | Global Recruiter 3-Second Scan & Evidence-based Impact | [`AGENTS/LINKEDIN_BRANDING_AGENT.md`](./AGENTS/LINKEDIN_BRANDING_AGENT.md) |
+| 🔍 **QA Verification Agent** | 5-Stage Static Integrity & Broken Link Zero Gate | [`AGENTS/QA_VERIFICATION_AGENT.md`](./AGENTS/QA_VERIFICATION_AGENT.md) |
+
+<br/>
+
 <div align="center">
 
-<!-- Dual-Theme Footer -->
+<!-- Dual-Theme Footer (Apple HIG Inspired) -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/apple_footer_dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/apple_footer_light.svg">

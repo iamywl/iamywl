@@ -1,0 +1,79 @@
+<svg width="850" height="130" viewBox="0 0 850 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="keyShadowLight" x="-5%" y="-5%" width="110%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#0F172A" flood-opacity="0.08" />
+    </filter>
+    <style>
+      @keyframes keyPress {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(2px); }
+      }
+      .kp-1 { animation: keyPress 3.2s ease-in-out infinite 0.0s; }
+      .kp-2 { animation: keyPress 3.2s ease-in-out infinite 0.5s; }
+      .kp-3 { animation: keyPress 3.2s ease-in-out infinite 1.0s; }
+      .kp-4 { animation: keyPress 3.2s ease-in-out infinite 1.5s; }
+      .kp-5 { animation: keyPress 3.2s ease-in-out infinite 2.0s; }
+      .kp-6 { animation: keyPress 3.2s ease-in-out infinite 2.5s; }
+    </style>
+  </defs>
+
+  <rect x="1" y="1" width="848" height="128" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2" />
+
+  <!-- Title & Description Header inside Deck -->
+  <g transform="translate(24, 18)">
+    <text x="0" y="12" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#2563EB" letter-spacing="0.6">
+      TACTICAL COMMAND DECK · SHORTCUT ARCHITECTURE
+    </text>
+    <text x="0" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="10.5" font-weight="500" fill="#64748B">
+      Apple HIG tactile switch matrix for production infrastructure navigation &amp; telemetry
+    </text>
+  </g>
+
+  <!-- Key 1: ESC -->
+  <g class="kp-1" transform="translate(24, 52)" filter="url(#keyShadowLight)">
+    <rect width="120" height="58" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" />
+    <rect x="2" y="2" width="116" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.9" />
+    <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#0F172A">ESC</text>
+    <text x="12" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#2563EB">Kernel 6.x</text>
+  </g>
+
+  <!-- Key 2: TAB -->
+  <g class="kp-2" transform="translate(158, 52)" filter="url(#keyShadowLight)">
+    <rect width="120" height="58" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" />
+    <rect x="2" y="2" width="116" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.9" />
+    <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#0F172A">TAB ⇥</text>
+    <text x="12" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#059669">eBPF / BCC</text>
+  </g>
+
+  <!-- Key 3: ⌘K -->
+  <g class="kp-3" transform="translate(292, 52)" filter="url(#keyShadowLight)">
+    <rect width="125" height="58" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.2" />
+    <rect x="2" y="2" width="121" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.9" />
+    <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#1D4ED8">⌘ + K</text>
+    <text x="12" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">K8s Clusters</text>
+  </g>
+
+  <!-- Key 4: ⌥T -->
+  <g class="kp-4" transform="translate(431, 52)" filter="url(#keyShadowLight)">
+    <rect width="120" height="58" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" />
+    <rect x="2" y="2" width="116" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.9" />
+    <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#0F172A">⌥ + T</text>
+    <text x="12" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#7C3AED">Terraform IaC</text>
+  </g>
+
+  <!-- Key 5: ⇧A -->
+  <g class="kp-5" transform="translate(565, 52)" filter="url(#keyShadowLight)">
+    <rect width="120" height="58" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" />
+    <rect x="2" y="2" width="116" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.9" />
+    <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#0F172A">⇧ + A</text>
+    <text x="12" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#D97706">ArgoCD GitOps</text>
+  </g>
+
+  <!-- Key 6: ↵ -->
+  <g class="kp-6" transform="translate(699, 52)" filter="url(#keyShadowLight)">
+    <rect width="125" height="58" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" />
+    <rect x="2" y="2" width="121" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.9" />
+    <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#0F172A">RETURN ↵</text>
+    <text x="12" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#DC2626">epoll WAS</text>
+  </g>
+</svg>
