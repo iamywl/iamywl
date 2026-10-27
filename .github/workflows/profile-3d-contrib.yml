@@ -4,9 +4,10 @@ on:
   schedule:
     - cron: "0 18 * * *" # Daily at 18:00 UTC (03:00 KST)
   workflow_dispatch:
-  push:
-    branches:
-      - main
+
+concurrency:
+  group: profile-3d-contrib
+  cancel-in-progress: false
 
 permissions:
   contents: write
@@ -17,6 +18,8 @@ jobs:
     name: generate-github-profile-3d-contrib
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
