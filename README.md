@@ -1,13 +1,13 @@
 <div align="center">
 
-<!-- Dual-Theme: Hero Banner -->
+<!-- Dual-Theme: Hero Banner (Toss TDS Clean White × Apple HIG Specular Rim) -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/hero_banner_dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/hero_banner_light.svg">
   <img src="./assets/hero_banner_light.svg" width="100%" alt="@iamywl - Infrastructure &amp; Security Architect" />
 </picture>
 
-<!-- Real-time Typing Introduction (Simple & Modern) -->
+<!-- Real-time Typing Introduction (Simple & Modern Pretendard) -->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://readme-typing-svg.demolab.com?font=Pretendard&weight=700&size=16&duration=2800&pause=1100&color=58A6FF&center=true&vCenter=true&width=680&lines=Infrastructure+%26+Security+Architect+%40iamywl;Zero-Trust+Kernel+Tracing+via+eBPF+%26+Linux+Performance;Tart+VM+Multi-Cluster+Kubernetes+on+Apple+Silicon;Deterministic+IaC+%26+High-Concurrency+epoll+WAS">
@@ -28,7 +28,7 @@
   <img src="https://img.shields.io/badge/SecOps-Trivy_%26_Falco-10B981?style=flat-square&logo=snyk&logoColor=white" alt="SecOps" />
 </p>
 
-<!-- Quick Connect Dock -->
+<!-- Floating Quick Connect Dock -->
 <a href="https://iamywl.github.io">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/quick_connect_dark.svg">
@@ -39,7 +39,7 @@
 
 <br/><br/>
 
-<!-- Simple Modern Tactile Command Deck (Refactored 3D Keycaps) -->
+<!-- Tactical Command Deck (Apple HIG Tactile Switch Matrix) -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./assets/tactile_deck_dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="./assets/tactile_deck_light.svg">
@@ -51,6 +51,7 @@
 <br/>
 
 ### 🌤️ Engineering Focus &amp; Core Stacks
+<sub>Architectural Specializations &amp; Production Reliability Metrics</sub>
 
 | Classification | Technical Specialization &amp; Architecture Matrix |
 | :--- | :--- |
@@ -64,6 +65,7 @@
 <br/>
 
 ### 📐 Systems &amp; Infrastructure Architecture Matrix
+<sub>Verified Engineering Benchmarks &amp; Low-Level Architectural Solutions</sub>
 
 | Architectural Vector | Benchmark / SLA Target | Engineering Implementation &amp; Solution |
 | :--- | :--- | :--- |
@@ -74,20 +76,8 @@
 
 <br/>
 
-### 🚀 Top Featured Repositories
-
-| Repository | Architectural Focus | Key Verified Metric | Primary Stack |
-| :--- | :--- | :--- | :--- |
-| [**`ebpf_NSR`**](https://github.com/iamywl/ebpf_NSR) | Kernel attack detection &amp; ML runtime defense | **&lt; 1.2μs** latency · **100k+ SYN/s** | `eBPF` `C/C++` `Python ML` |
-| [**`service_infra`**](https://github.com/iamywl/service_infra) | Tart VM 4-Node Multi-Cluster K8s | **99.9%** Uptime SLA · Zero Downtime | `Tart VM` `K8s` `ArgoCD` `Cilium` |
-| [**`IaC_apple_sillicon`**](https://github.com/iamywl/IaC_apple_sillicon) | Apple Silicon Native K8s IaC automation | **&lt; 42s** Cluster Ready · 0% Drift | `Terraform` `Ansible` `ARM64` |
-| [**`devsecops`**](https://github.com/iamywl/devsecops) | Enterprise DevSecOps 4-Cluster Platform | **100%** CVE Gating · **&lt; 500ms** Alert | `Trivy` `Falco` `Kyverno` `K8s` |
-| [**`Middleware_Hello`**](https://github.com/iamywl/Middleware_Hello) | High-Concurrency Linux WAS (epoll reactor) | **10,000+** Conns · **Sub-5ms** p99 | `epoll` `C/C++` `Zero-Copy` `Linux` |
-| [**`ROMA`**](https://github.com/iamywl/ROMA) | High-Scale Cloud Microservice Backend | **p95 &lt; 38ms** · **94%+** Cache Hit | `K8s` `HPA` `Redis` `PostgreSQL` |
-
-<br/>
-
 ### 🚀 Flagship Production &amp; Research Showcases
+<sub>Verified Core Repositories · Dual-Theme Bento Cards with Production Metrics</sub>
 
 <!-- Row 1: ebpf_NSR & service_infra -->
 <p align="center">
@@ -145,7 +135,22 @@
 
 <br/>
 
+### 📂 Production Codebases &amp; Impact Summary
+<sub>Direct Links, Verified Targets and Technology Arsenal Breakdown</sub>
+
+| Repository | Architectural Focus | Key Verified Metric | Primary Stack |
+| :--- | :--- | :--- | :--- |
+| [**`ebpf_NSR`**](https://github.com/iamywl/ebpf_NSR) | Kernel attack detection &amp; ML runtime defense | **&lt; 1.2μs** latency · **100k+ SYN/s** | `eBPF` `C/C++` `Python ML` |
+| [**`service_infra`**](https://github.com/iamywl/service_infra) | Tart VM 4-Node Multi-Cluster K8s | **99.9%** Uptime SLA · Zero Downtime | `Tart VM` `K8s` `ArgoCD` `Cilium` |
+| [**`IaC_apple_sillicon`**](https://github.com/iamywl/IaC_apple_sillicon) | Apple Silicon Native K8s IaC automation | **&lt; 42s** Cluster Ready · 0% Drift | `Terraform` `Ansible` `ARM64` |
+| [**`devsecops`**](https://github.com/iamywl/devsecops) | Enterprise DevSecOps 4-Cluster Platform | **100%** CVE Gating · **&lt; 500ms** Alert | `Trivy` `Falco` `Kyverno` `K8s` |
+| [**`Middleware_Hello`**](https://github.com/iamywl/Middleware_Hello) | High-Concurrency Linux WAS (epoll reactor) | **10,000+** Conns · **Sub-5ms** p99 | `epoll` `C/C++` `Zero-Copy` `Linux` |
+| [**`ROMA`**](https://github.com/iamywl/ROMA) | High-Scale Cloud Microservice Backend | **p95 &lt; 38ms** · **94%+** Cache Hit | `K8s` `HPA` `Redis` `PostgreSQL` |
+
+<br/>
+
 ### 🛠️ Technical Arsenal (Bento Architecture)
+<sub>4-Quadrant Deep Technology Matrix · Categorized Systems &amp; Cloud Stacks</sub>
 
 <p align="center">
   <picture>
@@ -158,8 +163,8 @@
 <br/>
 
 ### 🎧 Deep Focus &amp; Ambient Engineering Frequency
+<sub>Apple Music / Dynamic Island Style Lossless 24-bit / 96kHz Flow Session</sub>
 
-<!-- Simple Modern Focus Audio Player (Refactored Cosmic Audio Visualizer) -->
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/focus_ambient_dark.svg">
@@ -171,6 +176,7 @@
 <br/>
 
 ### 📊 Production Telemetry &amp; Transparent GitHub Stats
+<sub>Real-Time Commit Activity, Language Ratios, Live Telemetry &amp; 3D Voxel Grass</sub>
 
 <!-- GitHub Stats & Top Languages & Streak (Calibrated Monochrome & Toss Blue) -->
 <p align="center">
@@ -216,6 +222,7 @@
 <br/>
 
 ### 🛰️ Engineering Roadmap: 2026-2027 Trajectory
+<sub>Strategic Systems Engineering &amp; Platform Architecture Milestones</sub>
 
 | Phase | Milestone Track | Focus &amp; Research Scope | Target Outcome |
 | :--- | :--- | :--- | :--- |
@@ -227,6 +234,7 @@
 <br/>
 
 ### 🔍 Architectural Deep-Dives &amp; Verified Specifications
+<sub>Technical Whitepaper Summaries · Problem Statements &amp; Production Metrics</sub>
 
 <details>
 <summary><b>🔍 Deep Dive 01: ebpf_NSR · Kernel Defense &amp; Runtime Security</b></summary>
@@ -333,6 +341,7 @@
 <br/>
 
 ### 💻 Systems Engineering Console
+<sub>Kernel Tunings &amp; Core Architecture Philosophy</sub>
 
 ```bash
 $ sysctl -a | grep -E "kernel.sched|net.core.somaxconn"
@@ -347,13 +356,14 @@ net.ipv4.tcp_max_syn_backlog = 65535
 <br/>
 
 ### 🤖 Autonomous Agentic Framework
+<sub>Automated Profile Governance, Design Systems, CI/CD Pipelines &amp; QA Protocols</sub>
 
 | Agent Architecture | Target Focus | Specification Link |
 | :--- | :--- | :--- |
 | 🎨 **Design System Agent** | Toss TDS Clean White × Apple HIG Dark × Linear Precision | [`AGENTS/DESIGN_SYSTEM_AGENT.md`](./AGENTS/DESIGN_SYSTEM_AGENT.md) |
 | ⚙️ **Development Pipeline Agent** | 100% Idempotent GitHub Actions CI/CD Architecture | [`AGENTS/DEVELOPMENT_AGENT.md`](./AGENTS/DEVELOPMENT_AGENT.md) |
-| 💼 **LinkedIn Branding Agent** | Global Recruiter 3-Second Scan & Evidence-based Impact | [`AGENTS/LINKEDIN_BRANDING_AGENT.md`](./AGENTS/LINKEDIN_BRANDING_AGENT.md) |
-| 🔍 **QA Verification Agent** | 5-Stage Static Integrity & Broken Link Zero Gate | [`AGENTS/QA_VERIFICATION_AGENT.md`](./AGENTS/QA_VERIFICATION_AGENT.md) |
+| 💼 **LinkedIn Branding Agent** | Global Recruiter 3-Second Scan &amp; Evidence-based Impact | [`AGENTS/LINKEDIN_BRANDING_AGENT.md`](./AGENTS/LINKEDIN_BRANDING_AGENT.md) |
+| 🔍 **QA Verification Agent** | 5-Stage Static Integrity &amp; Broken Link Zero Gate | [`AGENTS/QA_VERIFICATION_AGENT.md`](./AGENTS/QA_VERIFICATION_AGENT.md) |
 
 <br/>
 

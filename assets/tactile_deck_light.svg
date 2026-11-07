@@ -1,79 +1,97 @@
-<svg width="850" height="130" viewBox="0 0 850 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="850" height="135" viewBox="0 0 850 135" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <filter id="keyShadowLight" x="-5%" y="-5%" width="110%" height="120%">
-      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#0F172A" flood-opacity="0.08" />
+    <!-- Key Drop Shadow Light -->
+    <filter id="keyBevelShadowLight" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#0F172A" flood-opacity="0.08" />
     </filter>
+
+    <!-- Key Top Cap Gradient Light -->
+    <linearGradient id="keyTopLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#F1F5F9" />
+    </linearGradient>
+
+    <!-- Key Top Cap Highlighted (Command) -->
+    <linearGradient id="keyTopBlueLight" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF" />
+      <stop offset="100%" stop-color="#DBEAFE" />
+    </linearGradient>
+
     <style>
-      @keyframes keyPress {
+      @keyframes tactilePress {
         0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(2px); }
+        50% { transform: translateY(2.5px); }
       }
-      .kp-1 { animation: keyPress 3.2s ease-in-out infinite 0.0s; }
-      .kp-2 { animation: keyPress 3.2s ease-in-out infinite 0.5s; }
-      .kp-3 { animation: keyPress 3.2s ease-in-out infinite 1.0s; }
-      .kp-4 { animation: keyPress 3.2s ease-in-out infinite 1.5s; }
-      .kp-5 { animation: keyPress 3.2s ease-in-out infinite 2.0s; }
-      .kp-6 { animation: keyPress 3.2s ease-in-out infinite 2.5s; }
+      .k-esc { animation: tactilePress 3.6s ease-in-out infinite 0.0s; }
+      .k-tab { animation: tactilePress 3.6s ease-in-out infinite 0.6s; }
+      .k-cmd { animation: tactilePress 3.6s ease-in-out infinite 1.2s; }
+      .k-opt { animation: tactilePress 3.6s ease-in-out infinite 1.8s; }
+      .k-shf { animation: tactilePress 3.6s ease-in-out infinite 2.4s; }
+      .k-ret { animation: tactilePress 3.6s ease-in-out infinite 3.0s; }
     </style>
   </defs>
 
-  <rect x="1" y="1" width="848" height="128" rx="14" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2" />
+  <!-- Deck Enclosure Frame -->
+  <rect x="2" y="2" width="846" height="131" rx="16" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1.2" />
 
-  <!-- Title & Description Header inside Deck -->
-  <g transform="translate(24, 18)">
-    <text x="0" y="12" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#2563EB" letter-spacing="0.6">
+  <!-- Deck Sub-Header & Metadata -->
+  <g transform="translate(24, 20)">
+    <circle cx="4" cy="5" r="3.5" fill="#2563EB" />
+    <text x="16" y="9" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" letter-spacing="0.06em" fill="#2563EB">
       TACTICAL COMMAND DECK · SHORTCUT ARCHITECTURE
     </text>
-    <text x="0" y="28" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="10.5" font-weight="500" fill="#64748B">
-      Apple HIG tactile switch matrix for production infrastructure navigation &amp; telemetry
+    <text x="798" y="9" font-family="'SFMono-Regular', Consolas, monospace" font-size="10.5" font-weight="600" fill="#94A3B8" text-anchor="end">
+      APPLE HIG TACTILE SWITCH · 60g ACTUATION
     </text>
   </g>
 
-  <!-- Key 1: ESC -->
-  <g class="kp-1" transform="translate(24, 52)" filter="url(#keyShadowLight)">
-    <rect width="120" height="58" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" />
-    <rect x="2" y="2" width="116" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.9" />
-    <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#0F172A">ESC</text>
-    <text x="12" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#2563EB">Kernel 6.x</text>
+  <!-- Key 1: ⎋ ESC (Kernel 6.x) -->
+  <g class="k-esc" transform="translate(15, 46)" filter="url(#keyBevelShadowLight)">
+    <!-- Base Chamfer -->
+    <rect width="125" height="66" rx="12" fill="#E2E8F0" />
+    <!-- Top Cap -->
+    <rect x="1.5" y="1.5" width="122" height="60" rx="10" fill="url(#keyTopLight)" stroke="#CBD5E1" stroke-width="1" />
+    <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#0F172A">⎋ ESC</text>
+    <text x="12" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11.5" font-weight="700" fill="#2563EB">Kernel 6.x</text>
   </g>
 
-  <!-- Key 2: TAB -->
-  <g class="kp-2" transform="translate(158, 52)" filter="url(#keyShadowLight)">
-    <rect width="120" height="58" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" />
-    <rect x="2" y="2" width="116" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.9" />
-    <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#0F172A">TAB ⇥</text>
-    <text x="12" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#059669">eBPF / BCC</text>
+  <!-- Key 2: ⇥ TAB (eBPF / libbpf) -->
+  <g class="k-tab" transform="translate(154, 46)" filter="url(#keyBevelShadowLight)">
+    <rect width="125" height="66" rx="12" fill="#E2E8F0" />
+    <rect x="1.5" y="1.5" width="122" height="60" rx="10" fill="url(#keyTopLight)" stroke="#CBD5E1" stroke-width="1" />
+    <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#0F172A">⇥ TAB</text>
+    <text x="12" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11.5" font-weight="700" fill="#059669">eBPF · libbpf</text>
   </g>
 
-  <!-- Key 3: ⌘K -->
-  <g class="kp-3" transform="translate(292, 52)" filter="url(#keyShadowLight)">
-    <rect width="125" height="58" rx="10" fill="#EFF6FF" stroke="#93C5FD" stroke-width="1.2" />
-    <rect x="2" y="2" width="121" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.9" />
+  <!-- Key 3: ⌘ K (K8s Clusters) - Highlighted Signature Key -->
+  <g class="k-cmd" transform="translate(293, 46)" filter="url(#keyBevelShadowLight)">
+    <rect width="125" height="66" rx="12" fill="#BFDBFE" />
+    <rect x="1.5" y="1.5" width="122" height="60" rx="10" fill="url(#keyTopBlueLight)" stroke="#93C5FD" stroke-width="1.2" />
     <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#1D4ED8">⌘ + K</text>
-    <text x="12" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#1D4ED8">K8s Clusters</text>
+    <text x="12" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11.5" font-weight="800" fill="#1D4ED8">K8s Clusters</text>
   </g>
 
-  <!-- Key 4: ⌥T -->
-  <g class="kp-4" transform="translate(431, 52)" filter="url(#keyShadowLight)">
-    <rect width="120" height="58" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" />
-    <rect x="2" y="2" width="116" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.9" />
+  <!-- Key 4: ⌥ T (Terraform IaC) -->
+  <g class="k-opt" transform="translate(432, 46)" filter="url(#keyBevelShadowLight)">
+    <rect width="125" height="66" rx="12" fill="#E2E8F0" />
+    <rect x="1.5" y="1.5" width="122" height="60" rx="10" fill="url(#keyTopLight)" stroke="#CBD5E1" stroke-width="1" />
     <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#0F172A">⌥ + T</text>
-    <text x="12" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#7C3AED">Terraform IaC</text>
+    <text x="12" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11.5" font-weight="700" fill="#7C3AED">Terraform IaC</text>
   </g>
 
-  <!-- Key 5: ⇧A -->
-  <g class="kp-5" transform="translate(565, 52)" filter="url(#keyShadowLight)">
-    <rect width="120" height="58" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" />
-    <rect x="2" y="2" width="116" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.9" />
+  <!-- Key 5: ⇧ A (ArgoCD GitOps) -->
+  <g class="k-shf" transform="translate(571, 46)" filter="url(#keyBevelShadowLight)">
+    <rect width="125" height="66" rx="12" fill="#E2E8F0" />
+    <rect x="1.5" y="1.5" width="122" height="60" rx="10" fill="url(#keyTopLight)" stroke="#CBD5E1" stroke-width="1" />
     <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#0F172A">⇧ + A</text>
-    <text x="12" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#D97706">ArgoCD GitOps</text>
+    <text x="12" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11.5" font-weight="700" fill="#D97706">ArgoCD GitOps</text>
   </g>
 
-  <!-- Key 6: ↵ -->
-  <g class="kp-6" transform="translate(699, 52)" filter="url(#keyShadowLight)">
-    <rect width="125" height="58" rx="10" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2" />
-    <rect x="2" y="2" width="121" height="24" rx="8" fill="#FFFFFF" fill-opacity="0.9" />
-    <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#0F172A">RETURN ↵</text>
-    <text x="12" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#DC2626">epoll WAS</text>
+  <!-- Key 6: ↩ RET (epoll WAS) -->
+  <g class="k-ret" transform="translate(710, 46)" filter="url(#keyBevelShadowLight)">
+    <rect width="125" height="66" rx="12" fill="#E2E8F0" />
+    <rect x="1.5" y="1.5" width="122" height="60" rx="10" fill="url(#keyTopLight)" stroke="#CBD5E1" stroke-width="1" />
+    <text x="12" y="22" font-family="'SFMono-Regular', Consolas, monospace" font-size="12" font-weight="700" fill="#0F172A">↩ RETURN</text>
+    <text x="12" y="47" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11.5" font-weight="700" fill="#DC2626">epoll WAS</text>
   </g>
 </svg>

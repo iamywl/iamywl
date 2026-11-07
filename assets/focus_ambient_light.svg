@@ -1,69 +1,102 @@
 <svg width="850" height="110" viewBox="0 0 850 110" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bgLight" x1="0%" y1="0%" x2="100%" y2="100%">
+    <!-- Background Gradient (Ceramic White) -->
+    <linearGradient id="focusBgLight" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#FFFFFF" />
       <stop offset="100%" stop-color="#F8FAFC" />
     </linearGradient>
-    <linearGradient id="barGradLight" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" stop-color="#3182F6" />
+
+    <!-- Spectrum Bar Gradient Light -->
+    <linearGradient id="eqBarGradLight" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="50%" stop-color="#3B82F6" />
       <stop offset="100%" stop-color="#60A5FA" />
     </linearGradient>
+
     <style>
-      @keyframes eq1 { 0%, 100% { height: 8px; y: 26px; } 50% { height: 28px; y: 6px; } }
-      @keyframes eq2 { 0%, 100% { height: 24px; y: 10px; } 50% { height: 12px; y: 22px; } }
-      @keyframes eq3 { 0%, 100% { height: 16px; y: 18px; } 50% { height: 32px; y: 2px; } }
-      @keyframes eq4 { 0%, 100% { height: 30px; y: 4px; } 50% { height: 10px; y: 24px; } }
-      @keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-      .bar-1 { animation: eq1 1.2s ease-in-out infinite; }
-      .bar-2 { animation: eq2 0.9s ease-in-out infinite 0.2s; }
-      .bar-3 { animation: eq3 1.4s ease-in-out infinite 0.4s; }
-      .bar-4 { animation: eq4 1.1s ease-in-out infinite 0.1s; }
-      .bar-5 { animation: eq2 1.3s ease-in-out infinite 0.3s; }
-      .bar-6 { animation: eq1 0.8s ease-in-out infinite 0.5s; }
-      .bar-7 { animation: eq3 1.0s ease-in-out infinite 0.2s; }
-      .bar-8 { animation: eq4 1.2s ease-in-out infinite 0.4s; }
-      .live-dot { animation: pulseDot 2s ease-in-out infinite; }
+      @keyframes eqBounce1 { 0%, 100% { height: 6px; y: 26px; } 50% { height: 26px; y: 6px; } }
+      @keyframes eqBounce2 { 0%, 100% { height: 22px; y: 10px; } 50% { height: 10px; y: 22px; } }
+      @keyframes eqBounce3 { 0%, 100% { height: 14px; y: 18px; } 50% { height: 30px; y: 2px; } }
+      @keyframes eqBounce4 { 0%, 100% { height: 28px; y: 4px; } 50% { height: 8px; y: 24px; } }
+      @keyframes livePulseDot { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.35; transform: scale(1.3); } }
+      @keyframes discSpinPulse { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+      .b-1 { animation: eqBounce1 1.2s ease-in-out infinite; }
+      .b-2 { animation: eqBounce2 0.9s ease-in-out infinite 0.15s; }
+      .b-3 { animation: eqBounce3 1.4s ease-in-out infinite 0.3s; }
+      .b-4 { animation: eqBounce4 1.1s ease-in-out infinite 0.1s; }
+      .b-5 { animation: eqBounce2 1.3s ease-in-out infinite 0.25s; }
+      .b-6 { animation: eqBounce1 0.85s ease-in-out infinite 0.4s; }
+      .b-7 { animation: eqBounce3 1.05s ease-in-out infinite 0.2s; }
+      .b-8 { animation: eqBounce4 1.25s ease-in-out infinite 0.35s; }
+      .live-emerald-dot { animation: livePulseDot 2s ease-in-out infinite; transform-origin: 5px 5px; }
     </style>
   </defs>
 
   <!-- Container Surface -->
-  <rect x="1" y="1" width="848" height="108" rx="14" fill="url(#bgLight)" stroke="#E2E8F0" stroke-width="1.2" />
+  <rect x="2" y="2" width="846" height="106" rx="16" fill="url(#focusBgLight)" stroke="#E2E8F0" stroke-width="1.2" />
 
-  <!-- Play / Sound Icon Button -->
+  <!-- Play / Sound Icon Controller -->
   <g transform="translate(24, 25)">
-    <rect width="60" height="60" rx="12" fill="#EFF6FF" stroke="#DBEAFE" stroke-width="1" />
-    <circle cx="30" cy="30" r="16" fill="#3182F6" />
-    <path d="M26 23 L38 30 L26 37 Z" fill="#FFFFFF" />
+    <rect width="60" height="60" rx="14" fill="#EFF6FF" stroke="#DBEAFE" stroke-width="1.2" />
+    <circle cx="30" cy="30" r="17" fill="#3182F6" />
+    <!-- Play Triangle -->
+    <path d="M26 22.5 L38 30 L26 37.5 Z" fill="#FFFFFF" />
   </g>
 
-  <!-- Track Meta -->
-  <g transform="translate(102, 28)">
+  <!-- Track Information & Scrubber -->
+  <g transform="translate(100, 24)">
+    <!-- Category Pill -->
     <g transform="translate(0, 0)">
-      <circle cx="5" cy="5" r="4" fill="#10B981" class="live-dot" />
-      <text x="16" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11" font-weight="700" fill="#2563EB" letter-spacing="0.5">NOW FOCUSING · AMBIENT FREQUENCY</text>
+      <circle cx="5" cy="5" r="3.5" fill="#10B981" class="live-emerald-dot" />
+      <text x="16" y="8" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="10.5" font-weight="700" fill="#2563EB" letter-spacing="0.06em">
+        NOW FOCUSING · AMBIENT FREQUENCY
+      </text>
     </g>
-    <text x="0" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="14.5" font-weight="700" fill="#0F172A">
+
+    <!-- Track Title -->
+    <text x="0" y="30" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="14.5" font-weight="700" fill="#0F172A">
       Kernel Tracing &amp; Distributed Consensus (432Hz Ambient Flow)
     </text>
-    <text x="0" y="52" font-family="-apple-system, BlinkMacSystemFont, 'Pretendard', sans-serif" font-size="11.5" font-weight="500" fill="#64748B">
-      Track 04 · Lossless 24-bit / 96kHz High-Fidelity · Deep Systems Architecture Session
-    </text>
+
+    <!-- Subtitle & Timeline Scrubber Bar -->
+    <g transform="translate(0, 48)">
+      <!-- Scrubber Track Line -->
+      <rect width="360" height="4" rx="2" fill="#E2E8F0" />
+      <rect width="254" height="4" rx="2" fill="#3182F6" />
+      <circle cx="254" cy="2" r="5" fill="#2563EB" stroke="#FFFFFF" stroke-width="1.5" />
+      <text x="375" y="6" font-family="'SFMono-Regular', Consolas, monospace" font-size="10.5" font-weight="600" fill="#64748B">
+        42:18 / 60:00
+      </text>
+    </g>
   </g>
 
-  <!-- Modern Linear Equalizer -->
-  <g transform="translate(680, 36)">
-    <rect class="bar-1" x="0" width="4" rx="2" fill="url(#barGradLight)" />
-    <rect class="bar-2" x="9" width="4" rx="2" fill="url(#barGradLight)" />
-    <rect class="bar-3" x="18" width="4" rx="2" fill="url(#barGradLight)" />
-    <rect class="bar-4" x="27" width="4" rx="2" fill="url(#barGradLight)" />
-    <rect class="bar-5" x="36" width="4" rx="2" fill="url(#barGradLight)" />
-    <rect class="bar-6" x="45" width="4" rx="2" fill="url(#barGradLight)" />
-    <rect class="bar-7" x="54" width="4" rx="2" fill="url(#barGradLight)" />
-    <rect class="bar-8" x="63" width="4" rx="2" fill="url(#barGradLight)" />
-    <rect class="bar-2" x="72" width="4" rx="2" fill="url(#barGradLight)" />
-    <rect class="bar-1" x="81" width="4" rx="2" fill="url(#barGradLight)" />
-    <rect class="bar-3" x="90" width="4" rx="2" fill="url(#barGradLight)" />
-    <rect class="bar-4" x="99" width="4" rx="2" fill="url(#barGradLight)" />
-    <text x="50" y="52" font-family="'SFMono-Regular', Consolas, monospace" font-size="10" font-weight="600" fill="#64748B" text-anchor="middle">42:18 / 60:00</text>
+  <!-- Right: 16-Band Waveform Equalizer & Hi-Res Badge -->
+  <g transform="translate(680, 24)">
+    <!-- Hi-Res Audio Badge -->
+    <rect x="0" y="0" width="144" height="20" rx="6" fill="#F1F5F9" stroke="#E2E8F0" stroke-width="1" />
+    <text x="72" y="14" font-family="'SFMono-Regular', Consolas, monospace" font-size="9" font-weight="700" fill="#2563EB" text-anchor="middle">
+      LOSSLESS · 24-BIT / 96kHz
+    </text>
+
+    <!-- 16 Equalizer Bars -->
+    <g transform="translate(0, 28)">
+      <rect class="b-1" x="0" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-2" x="9" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-3" x="18" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-4" x="27" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-5" x="36" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-6" x="45" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-7" x="54" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-8" x="63" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-3" x="72" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-2" x="81" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-1" x="90" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-4" x="99" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-5" x="108" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-7" x="117" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-6" x="126" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+      <rect class="b-8" x="135" width="4.5" rx="2.25" fill="url(#eqBarGradLight)" />
+    </g>
   </g>
 </svg>
